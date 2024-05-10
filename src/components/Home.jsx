@@ -9,9 +9,9 @@ const Home = () => {
     setShowCursor((prev) => !prev);
   };
 
-  // Function to handle key press
-  const handleKeyPress = () => {
-    // Display lorem ipsum text when any key is pressed
+  // Function to handle start event
+  const handleStart = () => {
+    // Display lorem ipsum text when starting
     setDisplayText('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
   };
 
@@ -28,11 +28,12 @@ const Home = () => {
   return (
     <div 
       className="relative flex items-start justify-start w-screen h-screen p-4 font-mono text-green-500 bg-black"
-      onKeyDown={handleKeyPress} // Listen for key presses
+      onKeyDown={handleStart} // Listen for key presses
+      onTouchStart={handleStart} // Listen for touch events
       tabIndex={0} // Ensure the div is focusable
     >
       <p>
-        Press any key to start
+        Press any key or touch anywhere to start
         <span className={`${showCursor ? 'opacity-0' : 'opacity-100'}`}>|</span>
       </p>
       <div className="mt-4">
