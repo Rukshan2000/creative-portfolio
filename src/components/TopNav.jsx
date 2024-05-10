@@ -24,7 +24,6 @@ const TopNav = () => {
   return (
     <nav className="font-mono text-green-500 bg-black">
       <div className="flex items-center justify-between p-4">
-        <span className="text-sm">C:\Users\rukshan&gt;</span>
         <span className="block mx-2 text-3xl cursor-pointer md:hidden" onClick={toggleMenu}>
           {isOpen ? (
             <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
