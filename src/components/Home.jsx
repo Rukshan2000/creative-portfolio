@@ -46,6 +46,11 @@ Creative Software Developer
     return () => clearInterval(interval);
   }, []);
 
+  // Function to navigate to the About page
+  const navigateToAbout = () => {
+    window.location.href = '/aboutpage';
+  };
+
   return (
     <div
       className="relative flex flex-col items-center justify-center w-screen h-screen p-4 font-mono text-green-500 bg-black"
@@ -62,8 +67,8 @@ Creative Software Developer
           <pre>{displayArt}</pre>
         </div>
       </div>
-      {started && ( // Only display the button if started
-        <button onClick={handleStart} className="px-4 py-2 mt-4 border border-green-500 rounded-md hover:bg-green-500 hover:text-black">Get Started</button>
+      {started && (
+        <button onClick={navigateToAbout} className="px-4 py-2 mt-4 border border-green-500 rounded-md hover:bg-green-500 hover:text-black">Get Started</button>
       )}
     </div>
   );
