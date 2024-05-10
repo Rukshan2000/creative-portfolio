@@ -59,7 +59,7 @@ const TopNav = () => {
           <button onClick={() => navigateTo('/contactpage')} className="mr-2 cursor-pointer hover:text-white">Contact</button>
         </li>
         <li className="mx-4 my-6 md:my-0">
-          <button onClick={() => navigateTo('/resume')} className="cursor-pointer hover:text-white">Resume</button>
+          <button onClick={() => navigateTo('/contactpage')} className="cursor-pointer hover:text-white">Resume</button>
         </li>
       </ul>
     </nav>
