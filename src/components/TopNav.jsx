@@ -32,7 +32,7 @@ const TopNav = () => {
   }, []);
 
   return (
-    <nav className="font-mono text-green-500 bg-black">
+    <nav className="fixed top-0 left-0 z-10 w-full font-mono text-green-500 bg-black">
       <div className="flex items-center justify-between p-4">
         <span className="text-sm">{currentDateTime}</span> {/* Display digital clock and date */}
         <span className="block mx-2 text-3xl cursor-pointer md:hidden" onClick={toggleMenu}>

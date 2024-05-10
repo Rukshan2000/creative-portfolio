@@ -1,6 +1,8 @@
 import React from 'react';
 import TopNav from '../components/TopNav';
 import About from '../components/About';
+import Footer from '../components/Footer';
+
 
 const HomePage = () => {
     return (
@@ -11,6 +13,8 @@ const HomePage = () => {
             <TopNav />
             {/* Include the About component */}
             <About />
+            <Footer />
+
         </div>
     );
 };
