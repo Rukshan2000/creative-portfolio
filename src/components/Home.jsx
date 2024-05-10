@@ -31,7 +31,7 @@ L___________________J     \\ \\___\\/
 /###################\\    (__)
 
 RUKSHAN THARINDU
-Creative Software Developer
+Software Developer
 `);
     setStarted(true); // Update started state
   };
@@ -68,7 +68,10 @@ Creative Software Developer
         </div>
       </div>
       {started && (
-        <button onClick={navigateToAbout} className="px-4 py-2 mt-4 border border-green-500 rounded-md hover:bg-green-500 hover:text-black">Get Started</button>
+        <button onClick={navigateToAbout} className="px-4 py-2 mt-4 border border-green-500 rounded-md hover:bg-green-500 hover:text-black">"Uncover My Story!"
+
+
+        </button>
       )}
     </div>
   );

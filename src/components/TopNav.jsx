@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const TopNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [currentDateTime, setCurrentDateTime] = useState('');
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -11,19 +12,29 @@ const TopNav = () => {
     window.location.href = path;
   };
 
-  const handleButtonClick = (path) => {
-    // Navigate to the specified path
-    navigateTo(path);
-  };
+  useEffect(() => {
+    // Update the current date and time every second
+    const interval = setInterval(() => {
+      const now = new Date();
+      const hours = now.getHours();
+      const minutes = now.getMinutes();
+      const seconds = now.getSeconds();
+      const ampm = hours >= 12 ? 'PM' : 'AM';
+      const formattedHours = hours % 12 || 12;
+      const formattedMinutes = minutes < 10 ? '0' + minutes : minutes;
+      const formattedSeconds = seconds < 10 ? '0' + seconds : seconds;
+      const timeString = `${formattedHours}:${formattedMinutes}:${formattedSeconds} ${ampm}`;
+      const dateString = now.toDateString();
+      setCurrentDateTime(`${timeString} | ${dateString}`);
+    }, 1000);
 
-  const handleLogout = () => {
-    // Redirect to the logout page
-    navigateTo('/splashpage');
-  };
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <nav className="font-mono text-green-500 bg-black">
       <div className="flex items-center justify-between p-4">
+        <span className="text-sm">{currentDateTime}</span> {/* Display digital clock and date */}
         <span className="block mx-2 text-3xl cursor-pointer md:hidden" onClick={toggleMenu}>
           {isOpen ? (
             <svg className="w-8 h-8 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -42,10 +53,10 @@ const TopNav = () => {
           <button onClick={() => navigateTo('/')} className="mr-2 cursor-pointer hover:text-white">Home</button>
         </li>
         <li className="mx-4 my-6 md:my-0">
-          <button onClick={() => navigateTo('/about')} className="mr-2 cursor-pointer hover:text-white">About</button>
+          <button onClick={() => navigateTo('/aboutpage')} className="mr-2 cursor-pointer hover:text-white">About</button>
         </li>
         <li className="mx-4 my-6 md:my-0">
-          <button onClick={() => navigateTo('/contact')} className="mr-2 cursor-pointer hover:text-white">Contact</button>
+          <button onClick={() => navigateTo('/contactpage')} className="mr-2 cursor-pointer hover:text-white">Contact</button>
         </li>
         <li className="mx-4 my-6 md:my-0">
           <button onClick={() => navigateTo('/resume')} className="cursor-pointer hover:text-white">Resume</button>
