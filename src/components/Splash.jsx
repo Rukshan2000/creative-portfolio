@@ -1,62 +1,29 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 
 const Splash = () => {
-  const [frame, setFrame] = useState(0);
-  const [loadingText, setLoadingText] = useState('Loading');
-
-  const frames = [
-    '⣾⠀',
-    '⣷⠀',
-    '⣯⠀',
-    '⣟⠀',
-    '⡿⠀',
-    '⢿⠀',
-    '⣾⠀',
-    '⣷⠀',
-    '⣯⠀',
-    '⣟⠀',
-    '⡿⠀',
-    '⢿⠀',
-    '⣾⠀',
-    '⣷⠀',
-    '⣯⠀',
-    '⣟⠀',
-    '⡿⠀',
-    '⢿⠀',
-    '⣾⠀',
-    '⣷⠀',
-    '⣯⠀',
-    '⣟⠀',
-    '⡿⠀',
-    '⢿⠀',
-  ];
-
   useEffect(() => {
-    const interval = setInterval(() => {
-      setFrame((prevFrame) => (prevFrame === frames.length - 1 ? 0 : prevFrame + 1));
-    }, 100);
-
-    // Create blinking dots effect for loading text
-    const dotsInterval = setInterval(() => {
-      setLoadingText((prevText) => (prevText === 'Loading...' ? 'Loading' : prevText + '.'));
-    }, 500);
-
-    // Redirect to homepage after 3 seconds
     const redirectTimeout = setTimeout(() => {
-      window.location.href = '/homepage'; // Change '/homepage' to the actual URL of your homepage
-    }, 3000);
+      const homepageSection = document.getElementById('homepage');
+      if (homepageSection) {
+        homepageSection.scrollIntoView({ behavior: 'smooth' });
+      } else {
+        window.location.href = '/homepage'; // Change '/homepage' to the desired URL
+      }
+    }, 3000); // 3 seconds
 
-    return () => {
-      clearInterval(interval);
-      clearInterval(dotsInterval);
-      clearTimeout(redirectTimeout);
-    };
+    return () => clearTimeout(redirectTimeout);
   }, []);
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen font-mono text-green-500 bg-black">
-      <div className="text-6xl">{frames[frame]}</div>
-      <div className="mt-4">{loadingText}</div>
+    <div className="flex items-center justify-center h-screen bg-white">
+      <div className="text-center">
+        <div className="relative">
+          <div className="w-24 h-24 border-t-8 border-b-8 border-gray-200 rounded-full"></div>
+          <div className="absolute top-0 left-0 w-24 h-24 border-t-8 border-b-8 border-blue-500 rounded-full animate-spin">
+          </div>
+        </div>
+        <div className="mt-4 font-semibold text-gray-700">Loading</div>
+      </div>
     </div>
   );
 };
