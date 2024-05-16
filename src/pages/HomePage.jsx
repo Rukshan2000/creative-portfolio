@@ -6,6 +6,7 @@ import Projects from '../components/Projects';
 import Blog from '../components/Blog';
 import Contact from '../components/Contact';
 import { Link } from 'react-scroll';
+import Button from '../components/Button';
 
 const HomePage = () => {
     const [showTopNav, setShowTopNav] = useState(false);
@@ -47,6 +48,7 @@ const HomePage = () => {
             <section id="contact">
                 <Contact />
             </section>
+            <Button/>
         </div>
     );
 };
