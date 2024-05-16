@@ -1,7 +1,7 @@
 import React from 'react';
 import TopNav from '../components/TopNav';
 import Contact from '../components/Contact';
-import Footer from '../components/Footer';
+import Footer from '../components/useGradientClass';
 
 
 const HomePage = () => {
@@ -13,7 +13,6 @@ const HomePage = () => {
             <TopNav />
             {/* Include the About component */}
             <Contact />
-            <Footer />
 
         </div>
     );

@@ -2,6 +2,10 @@ import React, { useState, useEffect } from 'react';
 import TopNav from '../components/TopNav';
 import LandingPage from '../components/LandingPage';
 import About from '../components/About';
+import Projects from '../components/Projects';
+import Blog from '../components/Blog';
+import Contact from '../components/Contact';
+import { Link } from 'react-scroll';
 
 const HomePage = () => {
     const [showTopNav, setShowTopNav] = useState(false);
@@ -31,7 +35,18 @@ const HomePage = () => {
             <div style={{ opacity: showLandingPage ? 1 : 0, transition: 'opacity 1s' }}>
                 <LandingPage />
             </div>
-            <About/>
+            <section id="about">
+                <About />
+            </section>
+            <section id="projects">
+                <Projects />
+            </section>
+            <section id="blog">
+                <Blog />
+            </section>
+            <section id="contact">
+                <Contact />
+            </section>
         </div>
     );
 };
