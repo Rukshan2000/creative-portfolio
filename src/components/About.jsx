@@ -59,9 +59,10 @@ const About = () => {
         </p>
       </div>
 
+
       <div className="flex flex-wrap gap-4 mt-10 ml-0">
-        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs" onClick={() => handleButtonClick("HTML is a markup language used for structuring and presenting content on the web.")}>
-          <h3 className="text-lg font-semibold text-center">HTML</h3>
+      <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs" onClick={() => handleButtonClick("HTML is a markup language used for structuring and presenting content on the web.")}>
+          <h3 className="text-lg font-semibold">HTML</h3>
         </button>
         <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs" onClick={() => handleButtonClick("CSS is a styling language used to control the presentation and layout of HTML elements on a webpage.")}>
           <h3 className="text-lg font-semibold">CSS</h3>
