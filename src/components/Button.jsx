@@ -9,6 +9,10 @@ const Button = () => {
     setIsOpen(!isOpen);
   };
 
+  const handlePopupClose = () => {
+    setIsOpen(false); // Set isOpen state to false to close the popup
+  };
+
   const sendMessage = () => {
     // Here you can implement sending the message via API (e.g., WhatsApp)
     const phoneNumber = '+94779054385';
@@ -27,14 +31,14 @@ const Button = () => {
         <img src={chatIcon} alt="Chat Icon" style={{ width: '50px', height: '50px' }} />
       </button>
       {isOpen && (
-        <div className="fixed bottom-0 right-0 z-10">
-          <div className="flex flex-col bg-gray-100 border border-gray-300 rounded-lg shadow-lg sm:w-80 md:w-96">
-            <div className="flex items-center justify-between p-2 bg-white border-b border-gray-300 rounded-t-lg">
+        <div className="fixed inset-0 z-10 flex items-center justify-center bg-gray-800 bg-opacity-50">
+          <div className="bg-white rounded-lg shadow-lg sm:w-80 md:w-96">
+            <div className="flex items-center justify-between p-2 bg-gray-200 border-b border-gray-300 rounded-t-lg">
               <div className="flex items-center space-x-2">
                 <img src={chatIcon} alt="Chat Icon" className="w-8 h-8" />
                 <span className="text-lg font-semibold">RUKSHAN THARINDU</span>
               </div>
-              <button onClick={handleClick} className="text-gray-500 hover:text-gray-700 focus:outline-none">
+              <button onClick={handlePopupClose} className="text-gray-500 hover:text-gray-700 focus:outline-none">
                 <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
