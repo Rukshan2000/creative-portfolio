@@ -44,29 +44,39 @@ const About = () => {
       </div>
 
       <div className="flex flex-wrap gap-4 mt-10 ml-0">
-      <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
-      <h3 className="text-lg font-semibold text-center">HTML</h3>
-    </div>
-      <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">          <h3 className="text-lg font-semibold">CSS</h3>
-        </div>
-          <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">          <h3 className="text-lg font-semibold">TAILWIND CSS</h3>
-        </div>
-          <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">          <h3 className="text-lg font-semibold">JAVASCRIPT</h3>
-        </div>
-          <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">          <h3 className="text-lg font-semibold">NODE JS</h3>
-        </div>
-          <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">          <h3 className="text-lg font-semibold">REACT</h3>
-        </div>
-          <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">          <h3 className="text-lg font-semibold">ASP .NET</h3>
-        </div>
-          <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">          <h3 className="text-lg font-semibold">GITHUB</h3>
-        </div>
-          <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">          <h3 className="text-lg font-semibold">FIREBASE</h3>
-        </div>
-          <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">          <h3 className="text-lg font-semibold">KOTLIN</h3>
-        </div>
-          <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">          <h3 className="text-lg font-semibold">FIGMA</h3>
-        </div>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold text-center">HTML</h3>
+        </button>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold">CSS</h3>
+        </button>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold">TAILWIND CSS</h3>
+        </button>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold">JAVASCRIPT</h3>
+        </button>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold">NODE JS</h3>
+        </button>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold">REACT</h3>
+        </button>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold">ASP .NET</h3>
+        </button>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold">GITHUB</h3>
+        </button>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold">FIREBASE</h3>
+        </button>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold">KOTLIN</h3>
+        </button>
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+          <h3 className="text-lg font-semibold">FIGMA</h3>
+        </button>
       </div>
     </div>
   );
