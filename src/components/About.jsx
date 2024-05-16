@@ -1,48 +1,81 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
-const TypingAnimation = () => {
-  const [typedText, setTypedText] = useState('');
-  const [projects, setProjects] = useState([]);
-  const textToType = `I am Rukshan Tharindu, a skilled full-stack software developer with 6 months of industry experience. As a freelancer, I specialize in crafting robust solutions that bridge the gap between innovative ideas and tangible products. My expertise lies in leveraging a wide array of technologies to deliver efficient and scalable software solutions. With a passion for problem-solving and a commitment to excellence, I thrive in dynamic environments where creativity meets practicality. Let's collaborate to turn your visions into reality.`;
-  const typingSpeed = 10; // Adjust typing speed here (milliseconds)
+const About = () => {
+  const [gradientClass, setGradientClass] = useState("");
 
   useEffect(() => {
-    let currentIndex = 0;
-    const interval = setInterval(() => {
-      setTypedText((prevTypedText) => prevTypedText + textToType[currentIndex]);
-      currentIndex++;
-      if (currentIndex === textToType.length) {
-        clearInterval(interval);
-        // Set projects after typing animation is complete
-        setProjects([
-          { name: 'Project 1', link: 'https://github.com/project1' },
-          { name: 'Project 2', link: 'https://github.com/project2' },
-          { name: 'Project 3', link: 'https://github.com/project3' },
-          { name: 'Project 4', link: 'https://github.com/project4' },
-          { name: 'Project 5', link: 'https://github.com/project5' },
-        ]);
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setGradientClass("bg-gradient-to-t");
+      } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+        setGradientClass("bg-gradient-to-r");
+      } else {
+        setGradientClass("bg-gradient-to-r");
       }
-    }, typingSpeed);
+    };
 
-    return () => clearInterval(interval);
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   return (
-    <div className="max-w-3xl p-1 pt-16 mx-auto font-mono text-green-500 bg-black"> {/* Adjust max-width here */}
-      <p>{typedText}</p>
+<div className={`grid grid-cols-1 gap-5 p-9 md:grid-cols-2 ${gradientClass} from-blue-200 via-white to-white sm:grid-cols-1 md:grid-cols-2`}>
+  <div>
+    <h2 className="mb-4 text-3xl font-bold">About Me</h2>
+    <p className="text-xl font-semibold text-justify">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar
+      libero a justo convallis, vitae varius metus tristique. Nullam
+      volutpat, velit a ultrices cursus, nulla magna ultrices purus, et
+      semper odio nisi at justo.
+    </p>
+    <p className="mt-4 text-xl font-semibold text-justify">
+      Quisque et orci a mauris suscipit suscipit. Donec in ex eget leo
+      ultricies dignissim in eget ex. Aliquam fermentum tellus nec feugiat
+      ultrices. In hac habitasse platea dictumst.
+    </p>
+  </div>
 
-      {projects.length > 0 && (
-        <div className="mt-4">
-          <p className="mb-2">Here are my projects:</p>
-          {projects.map((project, index) => (
-            <div key={index} className="mb-2">
-              <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-white">{project.name}</a>
-            </div>
-          ))}
+      <div className="flex flex-wrap gap-4 mt-10 ml-20">
+      <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+      <h3 className="text-lg font-semibold text-center">HTML</h3>
+    </div>
+    <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+          <h3 className="text-lg font-semibold">CSS</h3>
         </div>
-      )}
+        <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+          <h3 className="text-lg font-semibold">TAILWIND CSS</h3>
+        </div>
+        <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+          <h3 className="text-lg font-semibold">JAVASCRIPT</h3>
+        </div>
+        <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+          <h3 className="text-lg font-semibold">NODE JS</h3>
+        </div>
+        <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+          <h3 className="text-lg font-semibold">REACT</h3>
+        </div>
+        <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+          <h3 className="text-lg font-semibold">ASP .NET</h3>
+        </div>
+        <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+          <h3 className="text-lg font-semibold">GITHUB</h3>
+        </div>
+        <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+          <h3 className="text-lg font-semibold">FIREBASE</h3>
+        </div>
+        <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+          <h3 className="text-lg font-semibold">KOTLIN</h3>
+        </div>
+        <div className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 hover:text-white ring ring-gradient-to-r from-orange-200 to-orange-400 ring-offset-4 ring-offset-gradient-to-r ring-blur-xs">
+          <h3 className="text-lg font-semibold">FIGMA</h3>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default TypingAnimation;
+export default About;
