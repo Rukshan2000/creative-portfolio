@@ -32,9 +32,9 @@ const HomePage = () => {
     return (
         <div className="bg-white">
             {showTopNav && <TopNav />}
-            <div style={{ opacity: showLandingPage ? 1 : 0, transition: 'opacity 1s' }}>
+            <section id="landing" style={{ opacity: showLandingPage ? 1 : 0, transition: 'opacity 1s' }}>
                 <LandingPage />
-            </div>
+            </section>
             <section id="about">
                 <About />
             </section>

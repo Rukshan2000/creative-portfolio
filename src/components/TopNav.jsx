@@ -39,7 +39,7 @@ const TopNav = () => {
 
       <ul className={`md:flex md:items-center md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-10 md:opacity-100 ${isOpen ? 'top-16 opacity-100' : 'top-full opacity-0'} justify-center`}>
       <li className="mx-4 my-6 text-lg font-bold text-indigo-600 duration-500 hover:text-orange-300 font-Poppins md:my-0">
-          <Link to="home" spy={true} smooth={true}>Home</Link>
+          <Link to="landing" spy={true} smooth={true}>Home</Link>
         </li>
         <li className="mx-4 my-6 text-lg font-bold text-indigo-600 duration-500 hover:text-orange-300 font-Poppins md:my-0">
           <Link to="about" spy={true} smooth={true}>About</Link>

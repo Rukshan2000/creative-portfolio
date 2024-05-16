@@ -46,13 +46,13 @@ const About = () => {
     <div className={`grid grid-cols-1 gap-5 p-9 md:grid-cols-2 ${gradientClass} from-blue-200 via-white to-white sm:grid-cols-1 md:grid-cols-2`}>
       <div>
         <h2 className="mb-4 text-3xl font-bold">About Me</h2>
-        <p className={`text-xl font-semibold text-justify ${isSmallScreen ? '' : 'mr-20'}`}>
+        <p className={`text-xl text-justify ${isSmallScreen ? '' : 'mr-20'}`}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar
           libero a justo convallis, vitae varius metus tristique. Nullam
           volutpat, velit a ultrices cursus, nulla magna ultrices purus, et
           semper odio nisi at justo.
         </p>
-        <p className={`mt-4 text-xl font-semibold text-justify ${isSmallScreen ? '' : 'mr-20'}`}>
+        <p className={`mt-4 text-xl  text-justify ${isSmallScreen ? '' : 'mr-20'}`}>
           Quisque et orci a mauris suscipit suscipit. Donec in ex eget leo
           ultricies dignissim in eget ex. Aliquam fermentum tellus nec feugiat
           ultrices. In hac habitasse platea dictumst.
@@ -60,7 +60,10 @@ const About = () => {
       </div>
 
 
+
       <div className="flex flex-wrap gap-4 mt-10 ml-0">
+
+
       <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs" onClick={() => handleButtonClick("HTML is a markup language used for structuring and presenting content on the web.")}>
           <h3 className="text-lg font-semibold">HTML</h3>
         </button>
@@ -101,6 +104,42 @@ const About = () => {
           <h3 className="text-lg font-semibold">PHP</h3>
         </button>
       </div>
+      
+      <div className="mt-8 mb-52">
+  <h2 className="mb-4 text-2xl font-bold">My Skills</h2>
+  <div className="flex flex-col space-y-2">
+    <div className="flex items-center">
+      <div className="w-1/4 font-semibold">Frontend:</div>
+      <div className="relative flex-grow h-8 bg-blue-100 rounded-lg">
+        <div className="absolute top-0 left-0 h-full bg-blue-500 rounded-lg" style={{ width: '80%' }}></div>
+      </div>
+    </div>
+    <div className="flex items-center">
+      <div className="w-1/4 font-semibold">Backend:</div>
+      <div className="relative flex-grow h-8 bg-blue-100 rounded-lg">
+        <div className="absolute top-0 left-0 h-full bg-green-500 rounded-lg" style={{ width: '60%' }}></div>
+      </div>
+    </div>
+    <div className="flex items-center">
+      <div className="w-1/4 font-semibold ">Database:</div>
+      <div className="relative flex-grow h-8 bg-blue-100 rounded-lg">
+        <div className="absolute top-0 left-0 h-full bg-yellow-500 rounded-lg" style={{ width: '50%' }}></div>
+      </div>
+    </div>
+    <div className="flex items-center">
+      <div className="w-1/4 font-semibold">UI/UX:</div>
+      <div className="relative flex-grow h-8 bg-blue-100 rounded-lg">
+        <div className="absolute top-0 left-0 h-full bg-purple-500 rounded-lg" style={{ width: '90%' }}></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
 {/* Pop-up message box */}{showPopup && (
   <div id="popup" className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
   <div className="p-6 bg-white rounded-lg" style={{ maxWidth: "500px" }}>
