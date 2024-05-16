@@ -43,7 +43,7 @@ const TopNav = () => {
         </span>
       </div>
 
-      <ul className={`md:flex md:items-center md:static absolute bg-indigo-100 w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-10 md:opacity-100 ${isOpen ? 'top-16 opacity-100' : 'top-full opacity-0'} justify-center`}>
+      <ul className={`md:flex md:items-center md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-10 md:opacity-100 ${isOpen ? 'top-16 opacity-100' : 'top-full opacity-0'} justify-center`}>
         <li className="mx-4 my-6 md:my-0">
           <button className="text-lg font-bold text-indigo-600 duration-500 hover:text-orange-300 font-Poppins" onClick={() => handleButtonClick("/homepage")}>
             Home
