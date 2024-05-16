@@ -3,6 +3,8 @@ import React, { useState, useEffect } from "react";
 const About = () => {
   const [gradientClass, setGradientClass] = useState("");
   const [isSmallScreen, setIsSmallScreen] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const [clickedButton, setClickedButton] = useState("");
 
   useEffect(() => {
     const handleResize = () => {
@@ -26,6 +28,16 @@ const About = () => {
     };
   }, []);
 
+  const handleButtonClick = (buttonName) => {
+    setShowPopup(true);
+    setClickedButton(buttonName);
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false);
+    setClickedButton("");
+  };
+
   return (
     <div className={`grid grid-cols-1 gap-5 p-9 md:grid-cols-2 ${gradientClass} from-blue-200 via-white to-white sm:grid-cols-1 md:grid-cols-2`}>
       <div>
@@ -44,7 +56,7 @@ const About = () => {
       </div>
 
       <div className="flex flex-wrap gap-4 mt-10 ml-0">
-        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
+        <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs" onClick={() => handleButtonClick("HTML")}>
           <h3 className="text-lg font-semibold text-center">HTML</h3>
         </button>
         <button className="flex items-center justify-center p-2 transition duration-300 rounded-lg md:p-3 max-h-12 hover:bg-indigo-600 ring ring-orange-100 ring-offset-1 ring-offset-gray-500 ring-blur-xs">
@@ -78,6 +90,17 @@ const About = () => {
           <h3 className="text-lg font-semibold">FIGMA</h3>
         </button>
       </div>
+     {/* Pop-up message box */}
+     {showPopup && (
+        <div className="fixed top-0 left-0 flex items-center justify-center w-full h-full bg-black bg-opacity-50">
+          <div className="p-6 bg-white rounded-lg">
+            <p className="text-xl font-semibold">Button Name: {clickedButton}</p>
+            <button className="mt-4 font-semibold text-blue-500" onClick={handleClosePopup}>
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
