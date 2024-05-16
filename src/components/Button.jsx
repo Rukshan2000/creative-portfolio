@@ -28,7 +28,7 @@ const Button = () => {
       </button>
       {isOpen && (
         <div className="fixed bottom-0 right-0 z-10">
-          <div className="flex flex-col bg-gray-100 border border-gray-300 rounded-lg shadow-lg w-96">
+          <div className="flex flex-col bg-gray-100 border border-gray-300 rounded-lg shadow-lg sm:w-80 md:w-96">
             <div className="flex items-center justify-between p-2 bg-white border-b border-gray-300 rounded-t-lg">
               <div className="flex items-center space-x-2">
                 <img src={chatIcon} alt="Chat Icon" className="w-8 h-8" />
