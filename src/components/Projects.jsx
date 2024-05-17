@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import projectImage from "../assest/MyPhoto.jpg";
+import projectImage from "../assest/project.jpg";
 
 const Projects = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
