@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import chatIcon from "../assest/chat.png";
+import chatIcon from "../assest/chats.png";
 
 const Button = () => {
   const [isOpen, setIsOpen] = useState(false);
