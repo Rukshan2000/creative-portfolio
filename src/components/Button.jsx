@@ -32,7 +32,7 @@ const Button = () => {
       </button>
       {isOpen && (
         <div className="fixed inset-0 z-10 flex items-center justify-center bg-gray-800 bg-opacity-50">
-          <div className="bg-white rounded-lg shadow-lg sm:w-80 md:w-96">
+          <div className="relative w-full bg-white rounded-lg shadow-lg sm:w-80 md:w-96">
             <div className="flex items-center justify-between p-2 bg-gray-200 border-b border-gray-300 rounded-t-lg">
               <div className="flex items-center space-x-2">
                 <img src={chatIcon} alt="Chat Icon" className="w-8 h-8" />
@@ -45,8 +45,18 @@ const Button = () => {
               </button>
             </div>
             <div className="flex-grow p-4">
-              <div className="h-64 mb-4 overflow-auto">
-                {/* Message History Goes Here */}
+              <div className="h-48 mb-4 overflow-auto md:h-64">
+                <div className="flex flex-col space-y-2">
+                  <div className="p-2 bg-gray-200 rounded-lg">
+                    <p className="text-sm break-words">Hi, </p>
+                  </div>
+                  <div className="p-2 bg-gray-200 rounded-lg">
+                    <p className="text-sm">I'm Rukshan Tharindu</p>
+                  </div>
+                  <div className="p-2 bg-gray-200 rounded-lg">
+                    <p className="text-sm">How can I help you?</p>
+                  </div>
+                </div>
               </div>
               <input
                 type="text"
@@ -58,12 +68,10 @@ const Button = () => {
               <button onClick={sendMessage} className="w-full px-4 py-2 mt-4 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
                 Send
               </button>
+              <button onClick={handlePopupClose} className="w-full px-4 py-2 mt-4 text-white bg-red-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+                Close
+              </button>
             </div>
-            <button onClick={handlePopupClose} className="absolute text-gray-500 top-2 right-2 hover:text-gray-700 focus:outline-none">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
           </div>
         </div>
       )}
