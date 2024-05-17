@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { Link } from 'react-scroll';
+import { Link as RouterLink } from 'react-router-dom';
 
 const Footer = () => {
     return (
@@ -7,22 +9,27 @@ const Footer = () => {
             <div className="w-full max-w-screen-xl p-4 mx-auto md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <a href="https://flowbite.com/" className="flex items-center mb-4 space-x-3 sm:mb-0 rtl:space-x-reverse">
-                        <span className="text-2xl font-bold text-indigo-600 font-Poppins">Rukshan</span>{' '}
-          <span className="text-2xl font-bold text-orange-300 font-Poppins">Tharindu</span>
+                        <span className="font-bold text-indigo-600 text-1xl font-Poppins">Rukshan</span>{' '}
+          <span className="font-bold text-orange-300 text-1xl font-Poppins">Tharindu</span>
                     </a>
                     <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">Home</a>
+                        <li className='hover:underline me-4 md:me-6'>
+                        <Link to="landing" spy={true} smooth={true} >Home</Link>
                         </li>
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">About</a>
+                        <li className='hover:underline me-4 md:me-6'>
+                        <Link to="about" spy={true} smooth={true} >About</Link>
                         </li>
-                        <li>
-                            <a href="#" className="hover:underline me-4 md:me-6">Projects</a>
+                        <li className='hover:underline me-4 md:me-6'>
+                        <Link to="projects" spy={true} smooth={true} >Projects</Link>
                         </li>
-                        <li>
-                            <a href="#" className="hover:underline">Blog</a>
+                        <li className='hover:underline me-4 md:me-6'>
+                        <Link to="landing" spy={true} smooth={true} >Others</Link>
                         </li>
+                        <li className='hover:underline me-4 md:me-6'>
+                        <Link to="contact" spy={true} smooth={true} >Contact</Link>
+                        </li>
+
+                        
                     </ul>
                     <div className="flex space-x-4">
                         <a href="#" className="text-blue-500 hover:text-blue-600"><FaTwitter /></a>
