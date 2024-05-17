@@ -33,6 +33,7 @@ const HomePage = () => {
 
     return (
         <div className="bg-white">
+            <h1>WEBSITE UNDER DEVELOPMENT</h1>
             {showTopNav && <TopNav />}
             <section id="landing" style={{ opacity: showLandingPage ? 1 : 0, transition: 'opacity 1s' }}>
                 <LandingPage />
