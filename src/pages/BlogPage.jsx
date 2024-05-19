@@ -1,5 +1,5 @@
 import React from 'react';
-import TopNav from '../components/TopNav';
+import SubNav from '../components/SubNav';
 import Blog from '../components/Blog';
 import Footer from '../components/Footer';
 
@@ -8,7 +8,7 @@ const HomePage = () => {
         <div>
             {/* Set the page title */}
             {/* Include the top navigation component */}
-            <TopNav />
+            <SubNav />
             {/* Include the About component */}
             <Blog />
             {/* Set the footer at the bottom */}
