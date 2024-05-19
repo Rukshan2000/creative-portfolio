@@ -13,7 +13,7 @@ const HomePage = () => {
             {/* Include the top navigation component */}
             <SubNav />
             {/* Include the About component */}
-            <QRCodeGenerator />
+            <Blog />
             {/* Set the footer at the bottom */}
             <Footer/>
         </div>
