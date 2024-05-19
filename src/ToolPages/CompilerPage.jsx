@@ -4,7 +4,7 @@ import Compiler from '../Tools/Compiler';
 
 import Footer from '../components/Footer';
 
-const HomePage = () => {
+const CompilerPage = () => {
     return (
         <div>
             {/* Set the page title */}
@@ -18,4 +18,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default CompilerPage;

@@ -1,12 +1,11 @@
 import React from 'react';
 import SubNav from '../components/SubNav';
-import Blog from '../components/Blog';
 import Compiler from '../Tools/Compiler';
-import QRCodeGenerator from '../Tools/QRCodeGenerator';
 
 import Footer from '../components/Footer';
+import QRCodeGenerator from '../Tools/QRCodeGenerator';
 
-const HomePage = () => {
+const QRCodeGeneratorPage = () => {
     return (
         <div>
             {/* Set the page title */}
@@ -20,4 +19,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default QRCodeGeneratorPage;

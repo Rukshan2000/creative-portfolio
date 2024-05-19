@@ -1,23 +1,22 @@
 import React from 'react';
 import SubNav from '../components/SubNav';
-import Blog from '../components/Blog';
 import Compiler from '../Tools/Compiler';
-import QRCodeGenerator from '../Tools/QRCodeGenerator';
 
 import Footer from '../components/Footer';
+import PasswordGenerator from '../Tools/PasswordGenerator';
 
-const HomePage = () => {
+const PasswordGeneratorPage = () => {
     return (
         <div>
             {/* Set the page title */}
             {/* Include the top navigation component */}
             <SubNav />
             {/* Include the About component */}
-            <QRCodeGenerator />
+            <PasswordGenerator />
             {/* Set the footer at the bottom */}
             <Footer/>
         </div>
     );
 };
 
-export default HomePage;
+export default PasswordGeneratorPage;

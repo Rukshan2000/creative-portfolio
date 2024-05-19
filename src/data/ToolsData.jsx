@@ -14,8 +14,17 @@ export const toolsData = [
     topic: "Frontend Framework",
     description: "This is a description for Tool 2",
     icon: FaReact, // Icon component imported from react-icons
-    link: "https://example.com/tool2",
+    link: "https://www.rukshantharindu.link/passwordgeneratorpage",
     hoverColor: "text-green-500" // CSS class for hover color
   },
+  {
+    ToolId: 2,
+    topic: "Frontend Framework",
+    description: "This is a description for Tool 2",
+    icon: FaReact, // Icon component imported from react-icons
+    link: "https://www.rukshantharindu.link/qrcodegeneratorpage",
+    hoverColor: "text-green-500" // CSS class for hover color
+  }
+  
   // Add more tools with topics as needed
 ];
