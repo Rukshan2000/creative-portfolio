@@ -52,7 +52,7 @@ function App() {
         </div>
         {/* Compiled Output */}
         <div>
-          <h1 className="mb-4 text-2xl font-bold">Output</h1>
+          <h1 className="mb-4 text-2xl font-bold">Out put</h1>
           {compileError ? (
             <div className="p-2 text-red-700 bg-red-100 border border-red-500 rounded-md">{compileError}</div>
           ) : (
