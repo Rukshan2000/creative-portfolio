@@ -3,6 +3,7 @@ import { FaGithub, FaReact, FaHtml5 } from 'react-icons/fa'; // Import the Font 
 export const toolsData = [
   {
     ToolId: 1,
+    topic: "Version Control",
     description: "This is a description for Tool 1",
     icon: FaGithub, // Icon component imported from react-icons
     link: "https://example.com/tool1",
@@ -10,37 +11,11 @@ export const toolsData = [
   },
   {
     ToolId: 2,
+    topic: "Frontend Framework",
     description: "This is a description for Tool 2",
     icon: FaReact, // Icon component imported from react-icons
     link: "https://example.com/tool2",
     hoverColor: "text-green-500" // CSS class for hover color
   },
-  {
-    ToolId: 3,
-    description: "This is a description for Tool 2",
-    icon: FaReact, // Icon component imported from react-icons
-    link: "https://example.com/tool2",
-    hoverColor: "text-green-500" // CSS class for hover color
-  },
-  {
-    ToolId: 4,
-    description: "This is a description for Tool 2",
-    icon: FaReact, // Icon component imported from react-icons
-    link: "https://example.com/tool2",
-    hoverColor: "text-green-500" // CSS class for hover color
-  },
-  {
-    ToolId: 5,
-    description: "This is a description for Tool 2",
-    icon: FaReact, // Icon component imported from react-icons
-    link: "https://example.com/tool2",
-    hoverColor: "text-green-500" // CSS class for hover color
-  },
-  {
-    ToolId: 6,
-    description: "This is a description for Tool 3",
-    icon: FaHtml5, // Icon component imported from react-icons
-    link: "https://example.com/tool3",
-    hoverColor: "text-yellow-500" // CSS class for hover color
-  }
+  // Add more tools with topics as needed
 ];
