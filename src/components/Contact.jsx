@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaTwitter, FaLinkedin, FaGithub, FaMapMarkerAlt, FaPhone, FaEnvelope} from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -11,25 +11,25 @@ const ContactMe = () => {
   const [gradientClass, setGradientClass] = useState('');
 
   useEffect(() => {
-      const handleResize = () => {
-          if (window.innerWidth < 768) {
-              setGradientClass("bg-gradient-to-t");
-              setIsSmallScreen(true);
-          } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
-              setGradientClass("bg-gradient-to-r");
-              setIsSmallScreen(false);
-          } else {
-              setGradientClass("bg-gradient-to-r");
-              setIsSmallScreen(false);
-          }
-      };
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setGradientClass("bg-gradient-to-t");
+        setIsSmallScreen(true);
+      } else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+        setGradientClass("bg-gradient-to-r");
+        setIsSmallScreen(false);
+      } else {
+        setGradientClass("bg-gradient-to-r");
+        setIsSmallScreen(false);
+      }
+    };
 
-      handleResize();
-      window.addEventListener("resize", handleResize);
+    handleResize();
+    window.addEventListener("resize", handleResize);
 
-      return () => {
-          window.removeEventListener("resize", handleResize);
-      };
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
 
   const handleChange = (e) => {
@@ -56,11 +56,10 @@ const ContactMe = () => {
     <div className={`grid grid-cols-1 gap-8 p-8 md:grid-cols-2 ${gradientClass} from-blue-200 via-white to-white sm:grid-cols-1 md:grid-cols-2`}>
       {/* Contact Information */}
       <div className="flex flex-col space-y-4">
-
-      <div>
+        <div>
           <h2 className="mb-4 text-2xl font-bold">Contact Information</h2>
-
-        </div>        <form onSubmit={handleSubmit} className="space-y-4">
+        </div>
+        <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="name" className="block font-medium text-gray-700">Name</label>
             <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="w-full px-3 py-2 mt-1 border border-gray-300 rounded-md focus:outline-none focus:border-blue-500" />
@@ -75,6 +74,7 @@ const ContactMe = () => {
           </div>
           <button type="submit" className="px-4 py-2 text-white transition duration-300 bg-blue-500 rounded-md hover:bg-blue-600">Send</button>
         </form>
+        {/* Phone and Email Links */}
       </div>
       {/* Social Media Icons */}
       <div className={`w-full md:w-auto ${isSmallScreen ? 'md:col-span-2' : ''}`}>
@@ -87,19 +87,20 @@ const ContactMe = () => {
       <p className="text-gray-800">No 130/03, Malinda, Kapugoda, Sri Lanka</p>
     </div>
     <div className="flex items-start">
-      <FaPhone className="mt-1 mr-2 text-gray-600" />
-      <p className="text-gray-800">ptt9054385</p>
+    <a href="tel:+94779054385" className="flex items-start">
+  <FaPhone className="mt-1 mr-2 text-gray-600" />
+  <p className="text-gray-800 underline-offset-auto">+94779054385</p>
+</a>
     </div>
     <div className="flex items-start">
-      <FaEnvelope className="mt-1 mr-2 text-gray-600" />
-      <p className="text-gray-800">rukshantharindu582@gmail.com</p>
+    <a href="mailto:rukshantharindu582@gmail.com" className="flex items-start">
+  <FaEnvelope className="mt-1 mr-2 text-gray-600 " />
+  <p className="text-gray-800 underline underline-offset-auto">rukshantharindu582@gmail.com</p>
+</a>
     </div>
   </div>
 </div>
-
-
-
-        <iframe
+<iframe
           title="Google Map"
           width="100%"
           height="400"
