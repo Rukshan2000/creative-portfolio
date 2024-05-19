@@ -6,7 +6,7 @@ export const toolsData = [
     topic: "Version Control",
     description: "This is a description for Tool 1",
     icon: FaGithub, // Icon component imported from react-icons
-    link: "https://example.com/tool1",
+    link: "https://www.rukshantharindu.link/compilerpage",
     hoverColor: "text-blue-500" // CSS class for hover color
   },
   {
