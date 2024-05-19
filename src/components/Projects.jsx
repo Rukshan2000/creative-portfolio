@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import projectImage from "../assest/project.jpg";
+import { projectData } from '../data/ProjectData'; // Import the projectData array
 
 const Projects = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
@@ -27,42 +27,14 @@ const Projects = () => {
         };
     }, []);
 
-    // Sample data for projects
-    const projects = [
-        {
-            id: 1,
-            title: "Project 1",
-            image: projectImage,
-            description: "Description of project 1."
-        },
-        {
-            id: 2,
-            title: "Project 2",
-            image: projectImage,
-            description: "Description of project 2."
-        },
-        {
-            id: 3,
-            title: "Project 3",
-            image: projectImage,
-            description: "Description of project 3."
-        },
-        {
-            id: 4,
-            title: "Project 4",
-            image: projectImage,
-            description: "Description of project 4."
-        }
-    ];
-
     return (
         <div className={` ${gradientClass} from-blue-200 via-white to-white`}>
             <h2 className="mb-8 text-3xl font-bold text-center">My Projects</h2>
             <div className={`justify-center items-center grid grid-cols-1 gap-8 ml-0 md:grid-cols-2 lg:grid-cols-4 ${gradientClass} from-blue-200 via-white to-white sm:grid-cols-1 md:grid-cols-2`}>
-                {projects.map(project => (
-                    <div key={project.id} className="w-[320px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-self-center">
+                {projectData.map(project => (
+                    <div key={project.ProjectId} className="w-[320px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-self-center">
                         <a href="#">
-                            <img className="rounded-t-lg" src={project.image} alt="" />
+                            <img className="rounded-t-lg" src={project.image} alt={project.title} />
                         </a>
                         <div className="p-5">
                             <a href="#">
