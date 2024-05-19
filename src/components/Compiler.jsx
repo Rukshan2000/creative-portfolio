@@ -34,7 +34,7 @@ function App() {
       {/* Code Input */}
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
         <div>
-          <h1 className="mb-4 text-2xl font-bold">Code Compiler</h1>
+          <h1 className="mb-4 text-2xl font-bold">Code Compiler..</h1>
           <textarea
             className="w-full p-2 pr-10 mb-4 border rounded-md shadow-md resize-none"
             rows="15"
