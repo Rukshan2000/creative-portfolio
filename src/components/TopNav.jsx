@@ -4,16 +4,22 @@ import { Link as RouterLink } from 'react-router-dom';
 
 const TopNav = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleDropdown = () => {
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   const scrollToSection = (sectionId) => {
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
-      toggleMenu(); // Close menu after navigation on mobile
+      setIsOpen(false); // Close main menu after navigation on mobile
+      setIsDropdownOpen(false); // Close dropdown menu after navigation on mobile
     }
   };
 
@@ -40,17 +46,17 @@ const TopNav = () => {
 
       <ul className={`md:flex md:items-center md:static absolute bg-white w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-10 md:opacity-100 ${isOpen ? 'top-16 opacity-100' : 'top-full opacity-0'} justify-center`}>
         <li className="mx-4 my-6 text-lg font-bold text-indigo-600 duration-500 hover:text-orange-300 font-Poppins md:my-0 hover:underline">
-          <Link to="landing" spy={true} smooth={true}>Home</Link>
+          <Link to="landing" spy={true} smooth={true} onClick={toggleMenu}>Home</Link>
         </li>
         <li className="mx-4 my-6 text-lg font-bold text-indigo-600 duration-500 hover:text-orange-300 font-Poppins md:my-0 hover:underline">
-          <Link to="about" spy={true} smooth={true}>About</Link>
+          <Link to="about" spy={true} smooth={true} onClick={toggleMenu}>About</Link>
         </li>
         <li className="mx-4 my-6 text-lg font-bold text-indigo-600 duration-500 hover:text-orange-300 font-Poppins md:my-0 hover:underline">
-          <Link to="projects" spy={true} smooth={true}>Projects</Link>
+          <Link to="projects" spy={true} smooth={true} onClick={toggleMenu}>Projects</Link>
         </li>
-        <li className="mx-4 my-6 text-lg font-bold text-indigo-600 duration-500 hover:text-orange-300 font-Poppins md:my-0 hover:underline">
-          <span onClick={toggleMenu} className="cursor-pointer">Others</span>
-          <ul className={`absolute top-full left-0 bg-white shadow-md p-2 rounded-md mt-1 w-36 ${isOpen ? 'block' : 'hidden'}`}>
+        <li className="relative mx-4 my-6 text-lg font-bold text-indigo-600 duration-500 hover:text-orange-300 font-Poppins md:my-0 hover:underline">
+          <span onClick={toggleDropdown} className="cursor-pointer">Others</span>
+          <ul className={`absolute top-full left-0 bg-white shadow-md p-2 rounded-md mt-1 w-36 ${isDropdownOpen ? 'block' : 'hidden'}`}>
             <li className="py-1">
               <RouterLink to="/blogpage" className="text-gray-700 hover:text-indigo-600">Blog</RouterLink>
             </li>
@@ -60,7 +66,7 @@ const TopNav = () => {
           </ul>
         </li>
         <li className="mx-4 my-6 text-lg font-bold text-indigo-600 duration-500 hover:text-orange-300 font-Poppins md:my-0 hover:underline">
-          <Link to="contact" spy={true} smooth={true}>Contact</Link>
+          <Link to="contact" spy={true} smooth={true} onClick={toggleMenu}>Contact</Link>
         </li>
       </ul>
     </nav>
