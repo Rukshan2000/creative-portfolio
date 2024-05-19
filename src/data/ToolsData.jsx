@@ -1,29 +1,29 @@
-import { FaGithub, FaReact, FaHtml5 } from 'react-icons/fa'; // Import the Font Awesome icons
+import { FaCode, FaKey, FaQrcode } from 'react-icons/fa'; // Import the Font Awesome icons
 
 export const toolsData = [
   {
     ToolId: 1,
-    topic: "Version Control",
-    description: "This is a description for Tool 1",
-    icon: FaGithub, // Icon component imported from react-icons
+    topic: "Online Compiler",
+    description: "This React app allows users to input, compile, and view HTML, CSS, and JavaScript code in real-time.",
+    icon: FaCode, // Icon component imported from react-icons
     link: "https://www.rukshantharindu.link/compilerpage",
     hoverColor: "text-blue-500" // CSS class for hover color
   },
   {
     ToolId: 2,
-    topic: "Frontend Framework",
-    description: "This is a description for Tool 2",
-    icon: FaReact, // Icon component imported from react-icons
+    topic: "Password Generator",
+    description: "This React tool generates random passwords with user-defined lengths and character sets. It features options for uppercase, lowercase, numbers, and special characters, plus easy copy-to-clipboard functionality.",
+    icon: FaKey, // Icon component imported from react-icons
     link: "https://www.rukshantharindu.link/passwordgeneratorpage",
-    hoverColor: "text-green-500" // CSS class for hover color
+    hoverColor: "text-blue-500" // CSS class for hover color
   },
   {
-    ToolId: 2,
-    topic: "Frontend Framework",
-    description: "This is a description for Tool 2",
-    icon: FaReact, // Icon component imported from react-icons
+    ToolId: 3,
+    topic: "QR Code Generator",
+    description: "This React tool generates customizable QR codes from user-inputted text or URLs, allowing users to select QR code colors and download the generated codes as PNG files.",
+    icon: FaQrcode, // Icon component imported from react-icons
     link: "https://www.rukshantharindu.link/qrcodegeneratorpage",
-    hoverColor: "text-green-500" // CSS class for hover color
+    hoverColor: "text-blue-500" // CSS class for hover color
   }
   
   // Add more tools with topics as needed
