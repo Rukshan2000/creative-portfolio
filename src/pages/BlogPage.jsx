@@ -1,7 +1,7 @@
 import React from 'react';
 import SubNav from '../components/SubNav';
 import Blog from '../components/Blog';
-import Compiler from '../components/Compiler';
+import Compiler from '../Tools/Compiler';
 
 import Footer from '../components/Footer';
 
@@ -12,7 +12,7 @@ const HomePage = () => {
             {/* Include the top navigation component */}
             <SubNav />
             {/* Include the About component */}
-            <Compiler />
+            <Blog />
             {/* Set the footer at the bottom */}
             <Footer/>
         </div>
