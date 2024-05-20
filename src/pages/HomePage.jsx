@@ -4,7 +4,7 @@ import TopNavSm from '../components/TopNavSm';
 import LandingPage from '../components/LandingPage';
 import About from '../components/About';
 import Projects from '../components/Projects';
-import Blog from '../components/Blog';
+import Button from '../components/Button';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -64,6 +64,7 @@ const HomePage = () => {
         <Contact />
       </section>
       <Footer />
+      < Button/>
     </div>
   );
 };

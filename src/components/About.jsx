@@ -47,15 +47,10 @@ const About = () => {
       <div>
         <h2 className="mb-4 text-3xl font-bold">About Me</h2>
         <p className={`text-xl text-justify ${isSmallScreen ? '' : 'mr-20'}`}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pulvinar
-          libero a justo convallis, vitae varius metus tristique. Nullam
-          volutpat, velit a ultrices cursus, nulla magna ultrices purus, et
-          semper odio nisi at justo.
+        My name is Rukshan Tharindu, and I am a passionate full-stack developer with a keen focus on front-end development. Choosing programming as my career path has been a deeply rewarding journey, driven by my fascination with crafting intuitive and visually appealing user experiences. With a firm grasp of both front-end technologies and back-end frameworks, I bring a holistic approach to my projects, ensuring seamless integration and optimal performance. 
         </p>
         <p className={`mt-4 text-xl  text-justify ${isSmallScreen ? '' : 'mr-20'}`}>
-          Quisque et orci a mauris suscipit suscipit. Donec in ex eget leo
-          ultricies dignissim in eget ex. Aliquam fermentum tellus nec feugiat
-          ultrices. In hac habitasse platea dictumst.
+        I thrive in dynamic environments where innovation and creativity flourish, and I am eager to contribute my expertise as a freelancer or join a team as a dedicated employee. Your consideration is greatly appreciated, and I look forward to the opportunity to collaborate on exciting ventures ahead.
         </p>
       </div>
 

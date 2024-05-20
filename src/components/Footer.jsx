@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaFacebook, FaLinkedin, FaGithub, FaTiktok, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 import { Link as RouterLink } from 'react-router-dom';
 
@@ -32,9 +32,11 @@ const Footer = () => {
                         
                     </ul>
                     <div className="flex space-x-4">
-                        <a href="#" className="text-blue-500 hover:text-blue-600"><FaTwitter /></a>
-                        <a href="#" className="text-blue-500 hover:text-blue-600"><FaLinkedin /></a>
-                        <a href="#" className="text-blue-500 hover:text-blue-600"><FaGithub /></a>
+                        <a href="https://www.facebook.com/profile.php?id=100087403308106" className="text-blue-500 hover:text-blue-600"><FaFacebook /></a>
+                        <a href="https://www.tiktok.com/@rukshan_tharindu?lang=en" className="text-blue-500 hover:text-blue-600"><FaTiktok /></a>
+                        <a href="https://www.youtube.com/channel/UC-PkI0Fs8160ypKVr7YQkcw" className="text-blue-500 hover:text-blue-600"><FaYoutube /></a>
+                        <a href="https://www.linkedin.com/in/rukshan-tharindu-872a09292/" className="text-blue-500 hover:text-blue-600"><FaLinkedin /></a>
+                        <a href="https://github.com/Rukshan2000" className="text-blue-500 hover:text-blue-600"><FaGithub /></a>
                     </div>
                 </div>
                 <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />

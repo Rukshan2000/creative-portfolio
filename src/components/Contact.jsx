@@ -57,7 +57,7 @@ const ContactMe = () => {
       {/* Contact Information */}
       <div className="flex flex-col space-y-4">
         <div>
-          <h2 className="mb-4 text-2xl font-bold">Contact Information</h2>
+          <h2 className="mb-4 text-2xl font-bold">Contact Me</h2>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
