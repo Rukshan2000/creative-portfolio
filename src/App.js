@@ -24,6 +24,8 @@ import HomePage from './pages/HomePage.jsx';
 import SplashPage from './pages/SplashPage.jsx';
 import BlogPage from './pages/BlogPage.jsx';
 import ToolsPage from './pages/ToolsPage.jsx';
+import UnderDevelopmentPage from './pages/UnderDevelopmentPage.jsx';
+
 
 
 
@@ -47,7 +49,7 @@ const App = () => {
         <Route path="/compilerpage" element={<CompilerPage />} /> 
         <Route path="/passwordgeneratorpage" element={<PasswordGeneratorPage />} /> 
         <Route path="/qrcodegeneratorpage" element={<QRCodeGeneratorPage />} /> 
-
+        <Route path="/underdevelopmentpage" element={<UnderDevelopmentPage />} /> 
 
 
 
