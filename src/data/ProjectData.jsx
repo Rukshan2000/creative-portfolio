@@ -14,14 +14,14 @@ export const projectData = [
         title: "Online Code Compiler",
         image: projectImage,
         description: "This application allows users to compile html/css/js codes online and see outputs",
-        link: "https://example.com/project3"
+        link: "https://www.rukshantharindu.link/compilerpage"
     },
     {
         ProjectId: 3,
         title: "Password Generator",
         image: projectImage,
         description: "This app allows to users create a strong random passwords",
-        link: "https://example.com/project4"
+        link: "https://www.rukshantharindu.link/passwordgeneratorpage"
     },
     {
         ProjectId: 5,
