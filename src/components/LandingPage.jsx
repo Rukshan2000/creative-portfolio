@@ -51,7 +51,7 @@ const LandingPage = () => {
       <div className="mb-12 text-center md:text-left md:ml-16">
         <div>
           <h1 className="text-5xl font-black text-transparent transition-opacity duration-500 animate-text bg-gradient-to-r from-indigo-600 via-purple-500 to-orange-300 bg-clip-text">Hi, I am Rukshan Tharindu</h1>
-          <h3 className="mt-2 text-2xl text-gray-600 transition-opacity duration-1000">I am a full stack developer</h3>
+          <h3 className="mt-2 text-2xl text-gray-600 transition-opacity duration-1000">I sculpt digital worlds, a full-stack artisan.</h3>
           <button onClick={handleHireMeClick} className="px-6 py-3 mt-8 text-white bg-blue-500 rounded-md hover:bg-blue-600">
                 Hire Me
             </button>        </div>
