@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TopNav from '../components/TopNav';
+import TopNavSm from '../components/TopNavSm';
 import LandingPage from '../components/LandingPage';
 import About from '../components/About';
 import Projects from '../components/Projects';
@@ -8,8 +9,25 @@ import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const HomePage = () => {
+  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768); // Adjust breakpoint as needed
   const [showTopNav, setShowTopNav] = useState(false);
   const [showLandingPage, setShowLandingPage] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth > 768); // Adjust breakpoint as needed
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Initial check
+    handleResize();
+
+    // Clean up event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   useEffect(() => {
     // Set a delay of 500 milliseconds before showing the TopNav
@@ -32,7 +50,7 @@ const HomePage = () => {
   return (
     <div className="bg-white">
       <h1>WEBSITE UNDER DEVELOPMENT</h1>
-      {showTopNav && <TopNav />}
+      {showTopNav && (isLargeScreen ? <TopNav /> : <TopNavSm />)}
       <section id="landing" style={{ opacity: showLandingPage ? 1 : 0, transition: 'opacity 1s' }}>
         <LandingPage />
       </section>
