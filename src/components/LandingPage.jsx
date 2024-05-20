@@ -5,6 +5,10 @@ const LandingPage = () => {
   const [imageStyle, setImageStyle] = useState({});
   const [gradientClass, setGradientClass] = useState("");
 
+  const handleHireMeClick = () => {
+    window.location.href = '/underdevelopmentpage';
+};
+
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
@@ -48,8 +52,9 @@ const LandingPage = () => {
         <div>
           <h1 className="text-5xl font-black text-transparent transition-opacity duration-500 animate-text bg-gradient-to-r from-indigo-600 via-purple-500 to-orange-300 bg-clip-text">Hi, I am Rukshan Tharindu</h1>
           <h3 className="mt-2 text-2xl text-gray-600 transition-opacity duration-1000">I am a full stack developer</h3>
-          <button className="px-6 py-3 mt-8 text-white bg-blue-500 rounded-md hover:bg-blue-600">Hire Me</button>
-        </div>
+          <button onClick={handleHireMeClick} className="px-6 py-3 mt-8 text-white bg-blue-500 rounded-md hover:bg-blue-600">
+                Hire Me
+            </button>        </div>
       </div>
       <div className="flex justify-center">
         <img 
