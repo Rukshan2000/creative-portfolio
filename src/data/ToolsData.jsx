@@ -1,4 +1,4 @@
-import { FaCode, FaKey, FaQrcode } from 'react-icons/fa'; // Import the Font Awesome icons
+import {  FaCode, FaComment, FaKey, FaQrcode } from 'react-icons/fa'; // Import the Font Awesome icons
 
 export const toolsData = [
   {
@@ -23,6 +23,14 @@ export const toolsData = [
     description: "This React tool generates customizable QR codes from user-inputted text or URLs, allowing users to select QR code colors and download the generated codes as PNG files.",
     icon: FaQrcode, // Icon component imported from react-icons
     link: "https://www.rukshantharindu.link/qrcodegeneratorpage",
+    hoverColor: "text-blue-500" // CSS class for hover color
+  },
+  {
+    ToolId: 4,
+    topic: "Online Chat App",
+    description: "ChatApp is a Firebase-powered messaging tool allowing users to sign in, send messages, and view chats.",
+    icon: FaComment , // Icon component imported from react-icons
+    link: "https://www.rukshantharindu.link/chatapppage",
     hoverColor: "text-blue-500" // CSS class for hover color
   }
   

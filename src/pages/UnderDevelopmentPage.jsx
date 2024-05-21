@@ -32,7 +32,6 @@ const Underdev = () => {
         {isLargeScreen ? <SubNav /> : <SubNavSm />}
             {/* Include the About component */}
             <Dev />
-            {/* Set the footer at the bottom */}
             <Footer/>
             < Button/>
 
