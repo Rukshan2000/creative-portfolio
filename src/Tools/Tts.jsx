@@ -1,57 +1,118 @@
-import React, { useState } from "react";
-// import { useSpeechSynthesis } from "react-speech-kit";
+import React, { useState } from 'react';
+import { FaRegCopy } from 'react-icons/fa'; // Import copy icon
 
-const Speech = () => {
-    const [value, setValue] = useState("");
-    const [selectedSpeaker, setSelectedSpeaker] = useState("Joanna");
-    const { speak, voices } = useSpeechSynthesis();
+const PasswordGenerator = () => {
+  const [password, setPassword] = useState('');
+  const [length, setLength] = useState(8);
+  const [includeUpperCase, setIncludeUpperCase] = useState(true);
+  const [includeLowerCase, setIncludeLowerCase] = useState(true);
+  const [includeNumbers, setIncludeNumbers] = useState(true);
+  const [includeSpecialChars, setIncludeSpecialChars] = useState(true);
 
-    const handleSpeakerChange = (event) => {
-        setSelectedSpeaker(event.target.value);
-    };
+  const generatePassword = () => {
+    const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
+    const numberChars = '0123456789';
+    const specialChars = '#$&';
 
-    const findVoiceByName = (name) => {
-        return voices.find(voice => voice.name === name);
-    };
+    let chars = '';
+    if (includeUpperCase) chars += uppercaseChars;
+    if (includeLowerCase) chars += lowercaseChars;
+    if (includeNumbers) chars += numberChars;
+    if (includeSpecialChars) chars += specialChars;
 
-    const handleSpeak = () => {
-        const selectedVoice = findVoiceByName(selectedSpeaker);
-        speak({ text: value, voice: selectedVoice });
-    };
+    let generatedPassword = '';
+    for (let i = 0; i < length; i++) {
+      generatedPassword += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
 
-    return (
-        <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
-            <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-md">
-                <h2 className="mb-4 text-3xl font-bold text-center">Text To Speech Converter</h2>
-                <textarea
-                    className="w-full h-64 p-4 mb-4 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    value={value}
-                    onChange={(e) => setValue(e.target.value)}
-                    placeholder="Enter text..."
-                ></textarea>
-                <div className="mb-4 text-center">
-                    <label className="block mb-2 text-sm font-bold text-gray-700">Select Speaker:</label>
-                    <select
-                        className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        value={selectedSpeaker}
-                        onChange={handleSpeakerChange}
-                    >
-                        {voices.map((voice) => (
-                            <option key={voice.name} value={voice.name}>{voice.name}</option>
-                        ))}
-                    </select>
-                </div>
-                <div className="text-center">
-                    <button
-                        className="px-6 py-3 font-bold text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                        onClick={handleSpeak}
-                    >
-                        Speak
-                    </button>
-                </div>
-            </div>
+    setPassword(generatedPassword);
+  };
+
+  const copyToClipboard = () => {
+    navigator.clipboard.writeText(password);
+    alert('Password copied to clipboard!');
+  };
+
+  return (
+    <div className="max-w-md p-8 mx-auto mt-16 bg-white rounded-lg shadow-lg">
+      <h2 className="mb-6 text-2xl font-bold text-center text-gray-800">Random Password Generator</h2>
+      <div className="mb-6">
+        <label htmlFor="length" className="block mb-2 font-medium text-gray-700">Password Length:</label>
+        <input
+          type="number"
+          id="length"
+          min="1"
+          value={length}
+          onChange={(e) => setLength(parseInt(e.target.value))}
+          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+      </div>
+      <div className="mb-6">
+        <div className="flex items-center mb-2">
+          <input
+            type="checkbox"
+            id="uppercase"
+            checked={includeUpperCase}
+            onChange={(e) => setIncludeUpperCase(e.target.checked)}
+            className="mr-2"
+          />
+          <label htmlFor="uppercase" className="font-medium text-gray-700">Include Uppercase Characters</label>
         </div>
-    );
+        <div className="flex items-center mb-2">
+          <input
+            type="checkbox"
+            id="lowercase"
+            checked={includeLowerCase}
+            onChange={(e) => setIncludeLowerCase(e.target.checked)}
+            className="mr-2"
+          />
+          <label htmlFor="lowercase" className="font-medium text-gray-700">Include Lowercase Characters</label>
+        </div>
+        <div className="flex items-center mb-2">
+          <input
+            type="checkbox"
+            id="numbers"
+            checked={includeNumbers}
+            onChange={(e) => setIncludeNumbers(e.target.checked)}
+            className="mr-2"
+          />
+          <label htmlFor="numbers" className="font-medium text-gray-700">Include Numbers</label>
+        </div>
+        <div className="flex items-center">
+          <input
+            type="checkbox"
+            id="specialChars"
+            checked={includeSpecialChars}
+            onChange={(e) => setIncludeSpecialChars(e.target.checked)}
+            className="mr-2"
+          />
+          <label htmlFor="specialChars" className="font-medium text-gray-700">Include Special Characters</label>
+        </div>
+      </div>
+      <button
+        onClick={generatePassword}
+        className="w-full px-4 py-2 mb-4 font-semibold text-white bg-blue-500 rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+      >
+        Generate Password
+      </button>
+      <div className="relative mt-4">
+        <label className="block mb-2 font-medium text-gray-700">Generated Password:</label>
+        <input
+          type="text"
+          value={password}
+          readOnly
+          className="w-full p-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <button
+          onClick={copyToClipboard}
+          className="absolute top-0 right-0 px-3 py-2 mt-2 mr-2 text-white bg-gray-500 rounded-md shadow-md hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
+        >
+          <FaRegCopy />
+        </button>
+      </div>
+    </div>
+  );
 };
 
-export default Speech;
+export default PasswordGenerator;
