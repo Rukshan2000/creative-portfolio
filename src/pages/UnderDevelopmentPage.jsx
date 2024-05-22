@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SubNav from '../components/SubNav';
 import SubNavSm from '../components/SubNavSm';
 import Button from '../components/Button';
-import Tools from '../components/Tools';
+import Tts from '../Tools/Tts';
 import Footer from '../components/Footer';
 import Dev from '../components/dev';
 

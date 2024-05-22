@@ -1,4 +1,4 @@
-import {  FaCode, FaComment, FaKey, FaQrcode } from 'react-icons/fa'; // Import the Font Awesome icons
+import {  FaVolumeUp ,FaCode, FaComment, FaKey, FaQrcode } from 'react-icons/fa'; // Import the Font Awesome icons
 
 export const toolsData = [
   {
@@ -31,6 +31,14 @@ export const toolsData = [
     description: "ChatApp is a Firebase-powered messaging tool allowing users to sign in, send messages, and view chats.",
     icon: FaComment , // Icon component imported from react-icons
     link: "https://www.rukshantharindu.link/chatapppage",
+    hoverColor: "text-blue-500" // CSS class for hover color
+  },
+  {
+    ToolId: 5,
+    topic: "Text To Speech",
+    description: "React component converts text to speech, offering speaker selection. Utilizes react-speech-kit. Suggested icon.",
+    icon: FaVolumeUp  , // Icon component imported from react-icons
+    link: "https://www.rukshantharindu.link/ttspage",
     hoverColor: "text-blue-500" // CSS class for hover color
   }
   

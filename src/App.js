@@ -19,6 +19,8 @@ import CompilerPage from './ToolPages/CompilerPage.jsx';
 import QRCodeGeneratorPage from './ToolPages/QRCodeGeneratorPage.jsx';
 import PasswordGeneratorPage from './ToolPages/PasswordGeneratorPage.jsx';
 import ChatAppPage from './ToolPages/ChatAppPage.jsx';
+import TtsPage from './ToolPages/TtsPage.jsx';
+
 
 // main pages
 import HomePage from './pages/HomePage.jsx';
@@ -52,6 +54,8 @@ const App = () => {
         <Route path="/qrcodegeneratorpage" element={<QRCodeGeneratorPage />} /> 
         <Route path="/underdevelopmentpage" element={<UnderDevelopmentPage />} /> 
         <Route path="/chatapppage" element={<ChatAppPage />} /> 
+        <Route path="/ttspage" element={<TtsPage />} /> 
+
 
 
 
