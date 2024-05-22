@@ -1,4 +1,4 @@
-import projectImage from "../assest/project.jpg";
+import html from "../assest/html.jpg";
 import chatgptBlog from "../assest/chatgptBlog.jpg";
 import blockchainBlog from "../assest/blockchainBlog.jpg";
 import roboticsBlog from "../assest/roboticsBlog.jpg";
@@ -108,7 +108,7 @@ export const blogData = [
     {
         id: 4,
         title: "Navigating the Metaverse: A Journey into the Digital Frontier",
-        image: metaverseBlog,
+        image: html,
         content: `
         <p>The concept of the Metaverse has captured the imagination of technologists, futurists, and dreamers alike, offering a tantalizing glimpse into a world where the boundaries between physical and digital realities blur. With roots in science fiction and aspirations rooted in cutting-edge technology, the Metaverse represents a virtual universe where users can interact, create, and explore in ways previously unimaginable.</p>
         
@@ -135,5 +135,27 @@ export const blogData = [
         <p><strong>The Future of the Metaverse:</strong></p>
         
         <p>Despite these challenges, the allure of the Metaverse remains undiminished, promising a future where the boundaries between physical and digital realities dissolve, and where the possibilities for exploration and expression are limitless. As technology continues to advance and our understanding of virtual environments deepens, the Metaverse holds the potential to reshape how we live, work, and interact in the digital age. Whether it's building virtual worlds, creating immersive experiences, or forging new connections, the Metaverse invites us to embark on a journey into the unknown, where the only limit is our imagination.</p>`
+    },
+    {
+        id: 5,
+        title: "Web Development with HTML, CSS, and JavaScript",
+        image: metaverseBlog,
+        content: `    <p>Web development is a dynamic and ever-evolving field that forms the backbone of the internet. It encompasses a range of techniques and technologies that work together to create websites and web applications. Among these technologies, HTML, CSS, and JavaScript are fundamental. Understanding how they interact and complement each other is crucial for anyone aspiring to be a web developer.</p>
+    
+        <h2>HTML: The Structure</h2>
+        <p>HTML, or HyperText Markup Language, is the foundation of web development. It defines the structure and content of a webpage. HTML uses a series of elements or tags to organize content, such as headings, paragraphs, images, links, and more. Each element serves a specific purpose and is essential for creating a well-structured document.</p>
+        <p>For instance, the <code>&lt;h1&gt;</code> tag defines the most important heading on the page, while the <code>&lt;p&gt;</code> tag is used for paragraphs. Links are created with the <code>&lt;a&gt;</code> tag, and images with the <code>&lt;img&gt;</code> tag. By mastering HTML, developers can ensure their content is properly formatted and accessible.</p>
+    
+        <h2>CSS: The Style</h2>
+        <p>CSS, or Cascading Style Sheets, is used to style and layout web pages. While HTML provides the structure, CSS is responsible for the visual presentation. This includes aspects such as colors, fonts, spacing, and positioning. CSS allows developers to create visually appealing websites that are both functional and aesthetically pleasing.</p>
+        <p>With CSS, you can control the look and feel of multiple pages by applying styles globally. For example, setting a consistent font and color scheme across all pages of a website can be achieved with just a few lines of CSS. Additionally, CSS supports responsive design, enabling web pages to adapt to different screen sizes and devices.</p>
+    
+        <h2>JavaScript: The Functionality</h2>
+        <p>JavaScript is a powerful programming language that adds interactivity and dynamic behavior to web pages. While HTML and CSS are static, JavaScript allows for real-time updates and interactive elements such as form validation, animations, and user feedback mechanisms.</p>
+        <p>JavaScript can be used for a wide range of tasks, from simple tasks like showing or hiding content, to complex operations like fetching data from a server and updating the page without refreshing (a technique known as AJAX). JavaScript frameworks and libraries, such as React, Angular, and Vue, further extend its capabilities, making it possible to build sophisticated single-page applications (SPAs).</p>
+    
+        <h2>Bringing It All Together</h2>
+        <p>The true power of web development lies in the synergy between HTML, CSS, and JavaScript. Each technology has its role, and together they enable the creation of modern, dynamic websites. A well-structured HTML document ensures content is organized and accessible. CSS enhances the user experience by providing visual consistency and responsive design. JavaScript adds the necessary interactivity and dynamism to engage users and provide a seamless experience.</p>
+        <p>By mastering these core technologies, aspiring web developers can build a solid foundation for their careers. As the web continues to evolve, staying updated with the latest advancements in HTML, CSS, and JavaScript is essential for success in the ever-changing landscape of web development.</p>`
     }
 ];
