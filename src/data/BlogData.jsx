@@ -108,7 +108,7 @@ export const blogData = [
     {
         id: 4,
         title: "Navigating the Metaverse: A Journey into the Digital Frontier",
-        image: html,
+        image: metaverseBlog,
         content: `
         <p>The concept of the Metaverse has captured the imagination of technologists, futurists, and dreamers alike, offering a tantalizing glimpse into a world where the boundaries between physical and digital realities blur. With roots in science fiction and aspirations rooted in cutting-edge technology, the Metaverse represents a virtual universe where users can interact, create, and explore in ways previously unimaginable.</p>
         
@@ -139,7 +139,7 @@ export const blogData = [
     {
         id: 5,
         title: "Web Development with HTML, CSS, and JavaScript",
-        image: metaverseBlog,
+        image: html,
         content: `    <p>Web development is a dynamic and ever-evolving field that forms the backbone of the internet. It encompasses a range of techniques and technologies that work together to create websites and web applications. Among these technologies, HTML, CSS, and JavaScript are fundamental. Understanding how they interact and complement each other is crucial for anyone aspiring to be a web developer.</p>
     
         <h2>HTML: The Structure</h2>
