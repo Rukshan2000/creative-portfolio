@@ -18,7 +18,7 @@ export const blogData = [
         image: chatgptBlog,
         content: `
 
-        <p>In the ever-evolving landscape of artificial intelligence, ChatGPT 4.0 emerges as a beacon of innovation, transforming the way we interact with machines. Developed by OpenAI, this latest iteration of the renowned language model pushes the boundaries of what's possible in natural language understanding and generation. With enhanced capabilities and a deeper understanding of context, ChatGPT 4.0 represents a significant leap forward in conversational AI.</p>
+        <p>In the ever-evolving landscape of artificial. intelligence, ChatGPT 4.0 emerges as a beacon of innovation, transforming the way we interact with machines. Developed by OpenAI, this latest iteration of the renowned language model pushes the boundaries of what's possible in natural language understanding and generation. With enhanced capabilities and a deeper understanding of context, ChatGPT 4.0 represents a significant leap forward in conversational AI.</p>
         
         <p><strong>Unprecedented Contextual Understanding</strong></p>
         
