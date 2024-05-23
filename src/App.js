@@ -20,6 +20,8 @@ import QRCodeGeneratorPage from './ToolPages/QRCodeGeneratorPage.jsx';
 import PasswordGeneratorPage from './ToolPages/PasswordGeneratorPage.jsx';
 import ChatAppPage from './ToolPages/ChatAppPage.jsx';
 import TtsPage from './ToolPages/TtsPage.jsx';
+import YtVideoDownloader from './ToolPages/YtVideoDownloader.jsx';
+
 
 
 // main pages
@@ -55,6 +57,8 @@ const App = () => {
         <Route path="/underdevelopmentpage" element={<UnderDevelopmentPage />} /> 
         <Route path="/chatapppage" element={<ChatAppPage />} /> 
         <Route path="/ttspage" element={<TtsPage />} /> 
+        <Route path="/ytvideodownloader" element={<YtVideoDownloader />} /> 
+
 
 
 
