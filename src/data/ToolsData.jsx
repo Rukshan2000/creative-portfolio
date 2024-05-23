@@ -1,4 +1,4 @@
-import {  FaVolumeUp ,FaCode, FaComment, FaKey, FaQrcode } from 'react-icons/fa'; // Import the Font Awesome icons
+import {  FaVolumeUp ,FaCode, FaComment, FaKey, FaQrcode, FaYoutube } from 'react-icons/fa'; // Import the Font Awesome icons
 
 export const toolsData = [
   {
@@ -39,6 +39,14 @@ export const toolsData = [
     description: "React component converts text to speech, offering speaker selection. Utilizes react-speech-kit. Suggested icon.",
     icon: FaVolumeUp  , // Icon component imported from react-icons
     link: "https://www.rukshantharindu.link/ttspage",
+    hoverColor: "text-blue-500" // CSS class for hover color
+  },
+  {
+    ToolId: 6,
+    topic: "Text To Speech",
+    description: "React component converts text to speech, offering speaker selection. Utilizes react-speech-kit. Suggested icon.",
+    icon: FaYoutube  , // Icon component imported from react-icons
+    link: "https://www.rukshantharindu.link/ytvideodownloader",
     hoverColor: "text-blue-500" // CSS class for hover color
   }
   

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import SubNav from '../components/SubNav';
 import SubNavSm from '../components/SubNavSm';
 import Button from '../components/Button';
-import Tts from '../Tools/Tts';
+import Downloader  from '../Tools/Downloader';
 import Footer from '../components/Footer';
 import Dev from '../components/dev';
 
@@ -32,6 +32,7 @@ const Underdev = () => {
         {isLargeScreen ? <SubNav /> : <SubNavSm />}
             {/* Include the About component */}
             <Dev />
+            <Downloader />
             <Footer/>
             < Button/>
 
