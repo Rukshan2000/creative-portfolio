@@ -4,9 +4,11 @@ import axios from 'axios';
 const Downloader = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [error, setError] = useState('');
+  const [downloading, setDownloading] = useState(false); // State for tracking downloading status
 
   const handleDownload = async () => {
     setError('');
+    setDownloading(true); // Set downloading status to true when starting the download
     try {
       const response = await axios.get(`http://localhost:4000/download?url=${encodeURIComponent(videoUrl)}`, {
         responseType: 'blob',
@@ -21,23 +23,26 @@ const Downloader = () => {
     } catch (err) {
       setError('Error downloading video');
       console.error('Error downloading video:', err);
+    } finally {
+      setDownloading(false); // Set downloading status to false after the download (whether successful or not)
     }
   };
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl mb-4">YouTube Video Downloader</h1>
+      <h1 className="mb-4 text-2xl">YouTube Video Downloader</h1>
       <input
         type="text"
         value={videoUrl}
         onChange={(e) => setVideoUrl(e.target.value)}
         placeholder="Enter YouTube video URL"
-        className="border p-2 mb-4 w-full"
+        className="w-full p-2 mb-4 border"
       />
-      <button onClick={handleDownload} className="bg-blue-500 text-white px-4 py-2 rounded">
+      <button onClick={handleDownload} className="px-4 py-2 text-white bg-blue-500 rounded">
         Download Video
       </button>
-      {error && <p className="text-red-500 mt-4">{error}</p>}
+      {downloading && <p className="mt-4 text-blue-500">Downloading your video, please wait...</p>} {/* Conditional rendering of downloading text */}
+      {error && <p className="mt-4 text-red-500">{error}</p>}
     </div>
   );
 };
