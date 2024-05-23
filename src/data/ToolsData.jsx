@@ -43,8 +43,8 @@ export const toolsData = [
   },
   {
     ToolId: 6,
-    topic: "Text To Speech",
-    description: "React component converts text to speech, offering speaker selection. Utilizes react-speech-kit. Suggested icon.",
+    topic: "Youtube Video Downloader",
+    description: "This React component allows you to easily download YouTube videos. Simply enter the YouTube video URL, and the component handles the rest, fetching the video and enabling you to download it in MP4 format.",
     icon: FaYoutube  , // Icon component imported from react-icons
     link: "https://www.rukshantharindu.link/ytvideodownloader",
     hoverColor: "text-blue-500" // CSS class for hover color

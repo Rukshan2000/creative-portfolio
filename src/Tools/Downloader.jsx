@@ -41,7 +41,7 @@ const Downloader = () => {
       <button onClick={handleDownload} className="px-4 py-2 text-white bg-blue-500 rounded">
         Download Video
       </button>
-      {downloading && <p className="mt-4 text-blue-500">Downloading your video, please wait...</p>} {/* Conditional rendering of downloading text */}
+      {downloading && <p className="mt-4 text-blue-500">Preparing your video, Please wait...</p>} {/* Conditional rendering of downloading text */}
       {error && <p className="mt-4 text-red-500">{error}</p>}
     </div>
   );
