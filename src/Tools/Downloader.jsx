@@ -33,7 +33,7 @@ const Downloader = () => {
 
   return (
     <div className="p-4">
-      <h1 className="mb-4 text-2xl">YouTube Video Downloader</h1>
+      <h1 className="mb-4 text-2xl">YouTube Video/Audio Downloader</h1>
       <input
         type="text"
         value={videoUrl}
