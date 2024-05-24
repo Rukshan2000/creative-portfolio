@@ -8,12 +8,12 @@ const Downloader = () => {
 
   const handleDownload = async () => {
     setError('');
-    setDownloading(true); // Set downloading status to true when starting the download
+    setDownloading(true);
     try {
-      const response = await axios.get(`https://backend-lovat-delta-32.vercel.app/download?url=${encodeURIComponent(videoUrl)}`, {
+      const response = await axios.get(`https://my-vercel-project.vercel.app/download?url=${encodeURIComponent(videoUrl)}`, {
         responseType: 'blob',
       });
-
+  
       const url = window.URL.createObjectURL(new Blob([response.data]));
       const link = document.createElement('a');
       link.href = url;
@@ -24,9 +24,10 @@ const Downloader = () => {
       setError('Error downloading video');
       console.error('Error downloading video:', err);
     } finally {
-      setDownloading(false); // Set downloading status to false after the download (whether successful or not)
+      setDownloading(false);
     }
   };
+  
 
   return (
     <div className="p-4">
