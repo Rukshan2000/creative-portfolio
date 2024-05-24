@@ -5,12 +5,14 @@ const Downloader = () => {
   const [videoUrl, setVideoUrl] = useState('');
   const [error, setError] = useState('');
   const [downloading, setDownloading] = useState(false); // State for tracking downloading status
+  const API_BASE_URL = 'https://ytdown-api.vercel.app'; // Replace this with your actual backend URL
+
 
   const handleDownload = async () => {
     setError('');
     setDownloading(true);
     try {
-      const response = await axios.get(`https://my-vercel-project.vercel.app/download?url=${encodeURIComponent(videoUrl)}`, {
+      const response = await axios.get(`${API_BASE_URL}/download?url=${encodeURIComponent(videoUrl)}&format=${format}`, {
         responseType: 'blob',
       });
   
