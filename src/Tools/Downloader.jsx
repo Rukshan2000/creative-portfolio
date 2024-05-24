@@ -10,7 +10,7 @@ const Downloader = () => {
     setError('');
     setDownloading(true); // Set downloading status to true when starting the download
     try {
-      const response = await axios.get(`http://localhost:4000/download?url=${encodeURIComponent(videoUrl)}`, {
+      const response = await axios.get(`https://backend-lovat-delta-32.vercel.app/download?url=${encodeURIComponent(videoUrl)}`, {
         responseType: 'blob',
       });
 
