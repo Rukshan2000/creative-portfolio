@@ -29,19 +29,18 @@ const Downloader = () => {
   };
 
   return (
-    <div className="p-4">
-      <h1 className="mb-4 text-2xl">YouTube Audio Downloader</h1> {/* Updated title */}
+    <div className="p-6 bg-gray-100 rounded-lg shadow-md">
+      <h1 className="mb-6 text-3xl font-semibold text-center text-gray-800">YouTube Audio Downloader</h1>
       <input
         type="text"
         value={videoUrl}
         onChange={(e) => setVideoUrl(e.target.value)}
         placeholder="Enter YouTube video URL"
-        className="w-full p-2 mb-4 border"
+        className="w-full px-4 py-2 mb-6 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
       />
-      <button onClick={handleDownload} className="px-4 py-2 text-white bg-blue-500 rounded">
-        Download Audio {/* Updated button text */}
+      <button onClick={handleDownload} className="w-full px-4 py-2 text-lg font-semibold text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
+        {downloading ? 'Downloading...' : 'Download Audio'}
       </button>
-      {downloading && <p className="mt-4 text-blue-500">Downloading your audio, please wait...</p>} {/* Updated loading message */}
       {error && <p className="mt-4 text-red-500">{error}</p>}
     </div>
   );
