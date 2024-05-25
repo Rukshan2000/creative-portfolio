@@ -52,7 +52,7 @@ export const toolsData = [
   {
     ToolId: 7,
     topic: "Invoice Generator",
-    description: "This React component allows you to easily download YouTube audios. Simply enter the YouTube video URL.",
+    description: "This React component allows you to easily download YouTube audios. Simply enter the YouTube video URL..",
     icon: FaMoneyBill  , // Icon component imported from react-icons
     link: "https://www.rukshantharindu.link/invoicegenerator",
     hoverColor: "text-blue-500" // CSS class for hover color
