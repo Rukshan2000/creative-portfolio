@@ -30,7 +30,7 @@ const Downloader = () => {
 
   return (
     <div className="p-6 bg-gray-100 rounded-lg shadow-md">
-      <h1 className="mb-6 text-3xl font-semibold text-center text-gray-800">YouTube Audio Downloader</h1>
+      <h1 className="mb-6 text-3xl font-semibold text-center text-gray-800">YouTube Audio Converter</h1>
       <input
         type="text"
         value={videoUrl}
