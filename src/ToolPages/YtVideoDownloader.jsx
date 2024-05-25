@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import SubNav from '../components/SubNav';
 import SubNavSm from '../components/SubNavSm';
+import ErrorNotice from '../components/ErrorNotice';
+
 import Button from '../components/Button';
 import Tts from '../Tools/Tts';
 import Footer from '../components/Footer';
@@ -32,6 +34,7 @@ const CompilerPage = () => {
       {isLargeScreen ? <SubNav /> : <SubNavSm />}
       {/* Include the Compiler component */}
       <Downloader />
+      <ErrorNotice/>
       {/* Set the footer at the bottom */}
       <Footer />
       < Button/>
