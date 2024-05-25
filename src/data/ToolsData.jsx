@@ -33,14 +33,14 @@ export const toolsData = [
     link: "https://www.rukshantharindu.link/chatapppage",
     hoverColor: "text-blue-500" // CSS class for hover color
   },
-  {
-    ToolId: 5,
-    topic: "Text To Speech",
-    description: "React component converts text to speech, offering speaker selection. Utilizes react-speech-kit. Suggested icon.",
-    icon: FaVolumeUp  , // Icon component imported from react-icons
-    link: "https://www.rukshantharindu.link/ttspage",
-    hoverColor: "text-blue-500" // CSS class for hover color
-  },
+  // {
+  //   ToolId: 5,
+  //   topic: "Text To Speech",
+  //   description: "React component converts text to speech, offering speaker selection. Utilizes react-speech-kit. Suggested icon.",
+  //   icon: FaVolumeUp  , // Icon component imported from react-icons
+  //   link: "https://www.rukshantharindu.link/ttspage",
+  //   hoverColor: "text-blue-500" // CSS class for hover color
+  // },
   {
     ToolId: 6,
     topic: "Youtube Video To Audio",
