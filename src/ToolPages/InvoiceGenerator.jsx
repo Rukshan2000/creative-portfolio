@@ -3,8 +3,8 @@ import SubNav from '../components/SubNav';
 import SubNavSm from '../components/SubNavSm';
 import Button from '../components/Button'; // Check if Button component is imported correctly
 import Footer from '../components/Footer';
-import InvoiceForm from './Tools/InvoiceForm';
-import InvoiceTemplate from './Tools/InvoiceTemplate';
+import InvoiceForm from '../Tools/InvoiceForm';
+import InvoiceTemplate from '../Tools/InvoiceTemplate';
 
 const InvoiceGenerator = () => {
   const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth > 768);
