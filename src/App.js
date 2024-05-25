@@ -21,6 +21,7 @@ import PasswordGeneratorPage from './ToolPages/PasswordGeneratorPage.jsx';
 import ChatAppPage from './ToolPages/ChatAppPage.jsx';
 import TtsPage from './ToolPages/TtsPage.jsx';
 import YtVideoDownloader from './ToolPages/YtVideoDownloader.jsx';
+import InvoiceGenerator from './ToolPages/InvoiceGenerator.jsx';
 
 
 
@@ -58,6 +59,8 @@ const App = () => {
         <Route path="/chatapppage" element={<ChatAppPage />} /> 
         <Route path="/ttspage" element={<TtsPage />} /> 
         <Route path="/ytvideodownloader" element={<YtVideoDownloader />} /> 
+        <Route path="/invoicegenerator" element={<InvoiceGenerator />} /> 
+
 
 
 
