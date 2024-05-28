@@ -1,4 +1,4 @@
-import {  FaVolumeUp ,FaCode, FaComment, FaKey, FaQrcode, FaYoutube, FaMoneyBill } from 'react-icons/fa'; // Import the Font Awesome icons
+import {  FaVolumeUp ,FaCode, FaComment, FaKey, FaQrcode, FaYoutube, FaMoneyBill, FaPage4 } from 'react-icons/fa'; // Import the Font Awesome icons
 
 export const toolsData = [
   {
@@ -52,9 +52,17 @@ export const toolsData = [
   {
     ToolId: 7,
     topic: "Invoice Generator",
-    description: "This React component allows you to easily download YouTube audios. Simply enter the YouTube video URL..",
+    description: "This React component allows you to easily generate invoice with your custom details",
     icon: FaMoneyBill  , // Icon component imported from react-icons
     link: "https://www.rukshantharindu.link/invoicegenerator",
+    hoverColor: "text-blue-500" // CSS class for hover color
+  },
+  {
+    ToolId: 8,
+    topic: "Resume Generator",
+    description: "This React component allows you to easily generate Resume with your custom details",
+    icon: FaPage4  , // Icon component imported from react-icons
+    link: "https://www.rukshantharindu.link/cvpage",
     hoverColor: "text-blue-500" // CSS class for hover color
   }
   

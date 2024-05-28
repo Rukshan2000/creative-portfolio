@@ -22,6 +22,8 @@ import ChatAppPage from './ToolPages/ChatAppPage.jsx';
 import TtsPage from './ToolPages/TtsPage.jsx';
 import YtVideoDownloader from './ToolPages/YtVideoDownloader.jsx';
 import InvoiceGenerator from './ToolPages/InvoiceGenerator.jsx';
+import CvPage from './ToolPages/CvPage.jsx';
+
 
 
 
@@ -47,19 +49,20 @@ const App = () => {
       <Routes>
 
         <Route path="/" element={<SplashPage />} />
-        <Route path="/homepage" element={<HomePage />} /> 
-        <Route path="/blogpage" element={<BlogPage />} /> 
+        <Route path="/homepage" element={<HomePage />} />
+        <Route path="/blogpage" element={<BlogPage />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:id" element={<BlogContent />} />
-        <Route path="/toolspage" element={<ToolsPage />} /> 
-        <Route path="/compilerpage" element={<CompilerPage />} /> 
-        <Route path="/passwordgeneratorpage" element={<PasswordGeneratorPage />} /> 
-        <Route path="/qrcodegeneratorpage" element={<QRCodeGeneratorPage />} /> 
-        <Route path="/underdevelopmentpage" element={<UnderDevelopmentPage />} /> 
-        <Route path="/chatapppage" element={<ChatAppPage />} /> 
-        <Route path="/ttspage" element={<TtsPage />} /> 
-        <Route path="/ytvideodownloader" element={<YtVideoDownloader />} /> 
-        <Route path="/invoicegenerator" element={<InvoiceGenerator />} /> 
+        <Route path="/toolspage" element={<ToolsPage />} />
+        <Route path="/compilerpage" element={<CompilerPage />} />
+        <Route path="/passwordgeneratorpage" element={<PasswordGeneratorPage />} />
+        <Route path="/qrcodegeneratorpage" element={<QRCodeGeneratorPage />} />
+        <Route path="/underdevelopmentpage" element={<UnderDevelopmentPage />} />
+        <Route path="/chatapppage" element={<ChatAppPage />} />
+        <Route path="/ttspage" element={<TtsPage />} />
+        <Route path="/ytvideodownloader" element={<YtVideoDownloader />} />
+        <Route path="/invoicegenerator" element={<InvoiceGenerator />} />
+        <Route path="/cvpage" element={<CvPage />} />
 
 
 
