@@ -116,7 +116,7 @@ const CvTemplate = ({ formData }) => {
             </style>
             <div ref={cvRef}>
                 <div className="flex max-w-4xl mx-auto bg-white" style={{ width: '220mm', minHeight: minHeight }}>
-                    <div className="w-1/3 p-5 text-white bg-green-700">
+                    <div className="w-1/3 p-5 text-white bg-yellow-700">
                         <div className="text-center">
                             {formData.profilePhoto && <img src={URL.createObjectURL(formData.profilePhoto)} alt="Profile" className="mx-auto mb-4 rounded-full w-36 h-36" />}
                         </div>
