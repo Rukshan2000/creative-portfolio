@@ -115,7 +115,9 @@ const CvForm = ({ onSubmit }) => {
             <NoticeWithToggle />
             {!formSubmitted && (
                 <form onSubmit={handleSubmit} className="p-4">
-                    <h2 className="mb-4 text-2xl font-bold">CV Form</h2>
+                    <h2 className="mb-4 text-2xl font-bold">CV Form - use descstop or desctop mode of your browser for get better preview of cv</h2>
+                    <p className="mb-4 "> Use descstop or desctop mode of your browser for get better preview of cv</p>
+
                     <div className="mb-4">
                         <label className="block mb-2 font-bold">Profile Photo</label>
                         <input type="file" name="profilePhoto" onChange={handleFileChange} className="w-full p-2 border" required />
@@ -242,6 +244,7 @@ const NoticeWithToggle = () => {
                 <>
                     <p className="mt-2 font-semibold">Guidelines:</p>
                     <ul className="pl-6 list-disc">
+                        <li>Crop your image to squre size for better view.</li>
                         <li>Education, Expertise, and Language: Limit entries to a maximum of 5 for each category.</li>
                         <li>Description: Introduce yourself in 70-80 words.</li>
                         <li>Experience: Limit to a maximum of 6 entries. Describe each experience in no more than 20 words.</li>
