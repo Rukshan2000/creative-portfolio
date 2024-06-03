@@ -23,6 +23,8 @@ import TtsPage from './ToolPages/TtsPage.jsx';
 import YtVideoDownloader from './ToolPages/YtVideoDownloader.jsx';
 import InvoiceGenerator from './ToolPages/InvoiceGenerator.jsx';
 import CvPage from './ToolPages/CvPage.jsx';
+import HoroscopePage from './ToolPages/HoroscopePage.jsx';
+
 
 
 
@@ -62,6 +64,7 @@ const App = () => {
         <Route path="/ttspage" element={<TtsPage />} />
         <Route path="/ytvideodownloader" element={<YtVideoDownloader />} />
         <Route path="/invoicegenerator" element={<InvoiceGenerator />} />
+        <Route path="/horoscope" element={<HoroscopePage />} />
         <Route path="/cvpage" element={<CvPage />} />
 
 
