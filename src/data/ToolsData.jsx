@@ -1,4 +1,4 @@
-import {  FaVolumeUp ,FaCode, FaComment, FaKey, FaQrcode, FaYoutube, FaMoneyBill, FaPage4 } from 'react-icons/fa'; // Import the Font Awesome icons
+import {  FaVolumeUp ,FaCode, FaComment, FaKey, FaQrcode, FaYoutube, FaMoneyBill, FaPage4, FaStar } from 'react-icons/fa'; // Import the Font Awesome icons
 
 export const toolsData = [
   {
@@ -63,6 +63,14 @@ export const toolsData = [
     description: "This React component allows you to easily generate Resume with your custom details",
     icon: FaPage4  , // Icon component imported from react-icons
     link: "https://www.rukshantharindu.link/cvpage",
+    hoverColor: "text-blue-500" // CSS class for hover color
+  },
+  {
+    ToolId: 9,
+    topic: "AI Horoscope Generator",
+    description: "This Tool app gives detailed horoscopes based on birth information provided by the user.",
+    icon: FaStar  , // Icon component imported from react-icons
+    link: "https://www.rukshantharindu.link/horoscope",
     hoverColor: "text-blue-500" // CSS class for hover color
   }
   
