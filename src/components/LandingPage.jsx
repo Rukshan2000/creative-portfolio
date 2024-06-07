@@ -6,7 +6,7 @@ const LandingPage = () => {
   const [gradientClass, setGradientClass] = useState("");
 
   const handleHireMeClick = () => {
-    window.location.href = '/underdevelopmentpage';
+    window.location.href = 'https://drive.usercontent.google.com/u/0/uc?id=1rROILn2ekw_rIG6tolKNtMtBQMHB7-Ct&export=download';
 };
 
   useEffect(() => {
