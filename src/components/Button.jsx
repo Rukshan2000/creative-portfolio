@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import chatIcon from "../assest/chats.png";
+import { FaWhatsapp } from 'react-icons/fa'; // Import WhatsApp icon from react-icons library
 
 const Button = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,13 +10,12 @@ const Button = () => {
   };
 
   const handlePopupClose = () => {
-    setIsOpen(false); // Set isOpen state to false to close the popup
+    setIsOpen(false);
   };
 
   const sendMessage = () => {
-    // Here you can implement sending the message via API (e.g., WhatsApp)
     const phoneNumber = '+94779054385';
-    const encodedMessage = encodeURIComponent(userMessage); // Use the userMessage state
+    const encodedMessage = encodeURIComponent(userMessage);
     const url = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
     window.open(url, '_blank');
   };
@@ -27,15 +26,15 @@ const Button = () => {
 
   return (
     <div className="fixed bottom-8 right-8">
-      <button onClick={handleClick} className="px-4 py-2 text-white sm:bottom-4 sm:right-4 md:px-6 md:py-3 lg:px-8 lg:py-4">
-        <img src={chatIcon} alt="Chat Icon" style={{ width: '50px', height: '50px' }} />
+      <button onClick={handleClick} className="flex items-center justify-center w-16 h-16 text-white bg-green-500 rounded-full shadow-lg hover:bg-green-600 focus:outline-none">
+        <FaWhatsapp className="w-8 h-8" />
       </button>
       {isOpen && (
         <div className="fixed inset-0 z-10 flex items-center justify-center bg-gray-800 bg-opacity-50">
           <div className="relative w-full bg-white rounded-lg shadow-lg sm:w-80 md:w-96">
             <div className="flex items-center justify-between p-2 bg-gray-200 border-b border-gray-300 rounded-t-lg">
               <div className="flex items-center space-x-2">
-                <img src={chatIcon} alt="Chat Icon" className="w-8 h-8" />
+                <FaWhatsapp className="w-8 h-8" />
                 <span className="text-lg font-semibold">RUKSHAN THARINDU</span>
               </div>
               <button onClick={handlePopupClose} className="text-gray-500 hover:text-gray-700 focus:outline-none">
@@ -68,7 +67,6 @@ const Button = () => {
               <button onClick={sendMessage} className="w-full px-4 py-2 mt-4 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600">
                 Send
               </button>
-
             </div>
           </div>
         </div>
