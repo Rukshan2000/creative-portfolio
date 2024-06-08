@@ -48,9 +48,18 @@ const LandingPage = () => {
   }, []);
 
   return (
-    <div className={`grid items-center justify-center min-h-screen px-8 pt-16 ${gradientClass} from-blue-200 via-white to-white sm:grid-cols-1 md:grid-cols-2`}>
+    <div className={`relative grid items-center justify-center min-h-screen px-8 pt-16 sm:grid-cols-1 md:grid-cols-2`}>
+      {/* Added decorative background elements */}
+      <div className="absolute inset-0 z-0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0 z-0">
+          <path fill="#F3F4F6" fillOpacity="1" d="M0,192L48,197.3C96,203,192,213,288,218.7C384,224,480,224,576,208C672,192,768,160,864,170.7C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+        </svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="absolute bottom-0 z-0">
+          <path fill="#E5E7EB" fillOpacity="1" d="M0,96L40,117.3C80,139,160,181,240,202.7C320,224,400,224,480,208C560,192,640,160,720,128C800,96,880,64,960,80C1040,96,1120,160,1200,186.7C1280,213,1360,203,1400,197.3L1440,192L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+        </svg>
+      </div>
       <motion.div
-        className="mb-12 text-center md:text-left md:ml-16"
+        className="z-10 mb-12 text-center md:text-left md:ml-16"
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
@@ -73,7 +82,7 @@ const LandingPage = () => {
         </motion.button>
       </motion.div>
       <motion.div
-        className="flex justify-center"
+        className="z-10 flex justify-center"
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
