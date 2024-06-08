@@ -6,7 +6,6 @@ import LandingPage from '../components/LandingPage';
 import About from '../components/About';
 import Projects from '../components/Projects';
 import Button from '../components/Button';
-// import Aichat from '../Tools/Aichat';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
