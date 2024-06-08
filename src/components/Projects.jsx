@@ -41,9 +41,10 @@ const Projects = () => {
                     <motion.div
                         key={project.ProjectId}
                         className="w-[320px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-self-center"
-                        initial={{ opacity: 0, y: 20 * index }}
+                        initial={{ opacity: 0, y: 20 }} // Adjust initial opacity and y position
                         animate={controls}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                        transition={{ duration: 0.5, delay: index * 0.1 }} // Adjust delay for staggered animation
+                        whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0, 0, 0, 0.2)" }} // Animation on hover
                     >
                         <a href={project.link} target="_blank" rel="noopener noreferrer">
                             <img className="rounded-t-lg" src={project.image} alt={project.title} />

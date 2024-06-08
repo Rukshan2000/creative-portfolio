@@ -41,8 +41,19 @@ const Button = () => {
         <FaWhatsapp className="w-8 h-8" />
       </motion.button>
       {isOpen && (
-        <div className="fixed inset-0 z-10 flex items-center justify-center bg-gray-800 bg-opacity-50">
-          <div className="relative w-full bg-white rounded-lg shadow-lg sm:w-80 md:w-96">
+        <motion.div
+          className="fixed inset-0 z-10 flex items-center justify-center bg-gray-800 bg-opacity-50"
+          initial={{ opacity: 0 }} // Initial opacity
+          animate={{ opacity: 1 }} // Fade in animation
+          exit={{ opacity: 0 }} // Fade out animation
+        >
+          <motion.div
+            className="relative w-full bg-white rounded-lg shadow-lg sm:w-80 md:w-96"
+            initial={{ scale: 0.5 }} // Initial scale
+            animate={{ scale: 1 }} // Scale in animation
+            exit={{ scale: 0.5 }} // Scale out animation
+            transition={{ duration: 0.5 }} // Animation duration
+          >
             <div className="flex items-center justify-between p-2 bg-gray-200 border-b border-gray-300 rounded-t-lg">
               <div className="flex items-center space-x-2">
                 <FaWhatsapp className="w-8 h-8" />
@@ -56,17 +67,33 @@ const Button = () => {
             </div>
             <div className="flex-grow p-4">
               <div className="h-48 mb-4 overflow-auto md:h-64">
-                <div className="flex flex-col space-y-2">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }} // Initial opacity and y position
+                  animate={{ opacity: 1, y: 0 }} // Fade in and move up animation
+                  transition={{ delay: 0.3, duration: 0.5 }} // Staggered animation
+                >
                   <div className="p-2 bg-gray-200 rounded-lg">
                     <p className="text-sm break-words">Hi, </p>
                   </div>
-                  <div className="p-2 bg-gray-200 rounded-lg">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }} // Initial opacity and y position
+                  animate={{ opacity: 1, y: 0 }} // Fade in and move up animation
+                  transition={{ delay: 0.6, duration: 0.5 }} // Staggered animation
+                >
+                  <div className="p-2 mt-2 bg-gray-200 rounded-lg">
                     <p className="text-sm">I'm Rukshan Tharindu</p>
                   </div>
-                  <div className="p-2 bg-gray-200 rounded-lg">
+                </motion.div>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }} // Initial opacity and y position
+                  animate={{ opacity: 1, y: 0 }} // Fade in and move up animation
+                  transition={{ delay: 0.9, duration: 0.5 }} // Staggered animation
+                >
+                  <div className="p-2 mt-2 bg-gray-200 rounded-lg">
                     <p className="text-sm">How can I help you?</p>
                   </div>
-                </div>
+                </motion.div>
               </div>
               <input
                 type="text"
@@ -79,8 +106,8 @@ const Button = () => {
                 Send
               </button>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       )}
     </div>
   );
