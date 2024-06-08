@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { projectData } from '../data/ProjectData'; // Import the projectData array
+import { projectData } from '../data/ProjectData';
+import { motion, useAnimation } from 'framer-motion';
 
 const Projects = () => {
     const [isSmallScreen, setIsSmallScreen] = useState(false);
     const [gradientClass, setGradientClass] = useState('');
+    const controls = useAnimation();
 
     useEffect(() => {
         const handleResize = () => {
@@ -27,12 +29,22 @@ const Projects = () => {
         };
     }, []);
 
+    useEffect(() => {
+        controls.start({ opacity: 1, y: 0 });
+    }, [controls]);
+
     return (
         <div className={` ${gradientClass} from-blue-200 via-white to-white`}>
             <h2 className="mb-8 text-3xl font-bold text-center">My Projects</h2>
             <div className={`justify-center items-center grid grid-cols-1 gap-8 ml-0 md:grid-cols-2 lg:grid-cols-4 ${gradientClass} from-blue-200 via-white to-white sm:grid-cols-1 md:grid-cols-2`}>
-                {projectData.slice(0, isSmallScreen ? 2 : projectData.length).map(project => (
-                    <div key={project.ProjectId} className="w-[320px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-self-center">
+                {projectData.slice(0, isSmallScreen ? 2 : projectData.length).map((project, index) => (
+                    <motion.div
+                        key={project.ProjectId}
+                        className="w-[320px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 justify-self-center"
+                        initial={{ opacity: 0, y: 20 * index }}
+                        animate={controls}
+                        transition={{ duration: 0.5, delay: index * 0.1 }}
+                    >
                         <a href={project.link} target="_blank" rel="noopener noreferrer">
                             <img className="rounded-t-lg" src={project.image} alt={project.title} />
                         </a>
@@ -48,7 +60,7 @@ const Projects = () => {
                                 </svg>
                             </a>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
             {/* "View All" button */}

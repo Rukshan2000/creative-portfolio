@@ -1,16 +1,21 @@
 import React, { useState } from 'react';
+import { motion, useAnimation } from 'framer-motion'; // Import motion and useAnimation from framer-motion library
 import { FaWhatsapp } from 'react-icons/fa'; // Import WhatsApp icon from react-icons library
 
 const Button = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [userMessage, setUserMessage] = useState('');
+  const control = useAnimation(); // Initialize animation control
 
   const handleClick = () => {
     setIsOpen(!isOpen);
+    // Start continuous rotation animation when isOpen is true
+    isOpen ? control.start({ rotate: 0 }) : control.start({ rotate: [0, -10, 10, 0], transition: { duration: 1, loop: Infinity } });
   };
 
   const handlePopupClose = () => {
     setIsOpen(false);
+    control.stop(); // Stop animation when popup is closed
   };
 
   const sendMessage = () => {
@@ -26,9 +31,15 @@ const Button = () => {
 
   return (
     <div className="fixed bottom-8 right-8">
-      <button onClick={handleClick} className="flex items-center justify-center w-16 h-16 text-white bg-green-500 rounded-full shadow-lg hover:bg-green-600 focus:outline-none">
+      <motion.button
+        onClick={handleClick}
+        className="flex items-center justify-center w-16 h-16 text-white bg-green-500 rounded-full shadow-lg hover:bg-green-600 focus:outline-none"
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        animate={control} // Use animation control
+      >
         <FaWhatsapp className="w-8 h-8" />
-      </button>
+      </motion.button>
       {isOpen && (
         <div className="fixed inset-0 z-10 flex items-center justify-center bg-gray-800 bg-opacity-50">
           <div className="relative w-full bg-white rounded-lg shadow-lg sm:w-80 md:w-96">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import TopNav from '../components/TopNav';
 import TopNavSm from '../components/TopNavSm';
 import LandingPage from '../components/LandingPage';
@@ -50,23 +51,40 @@ const HomePage = () => {
 
   return (
     <div className="bg-white">
-      <h1>WEBSITE UNDER DEVELOPMENT</h1>
-      {showTopNav && (isLargeScreen ? <TopNav /> : <TopNavSm />)}
-      <section id="landing" style={{ opacity: showLandingPage ? 1 : 0, transition: 'opacity 1s' }}>
-        <LandingPage />
+      {showTopNav && (isLargeScreen ? 
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+          <TopNav />
+        </motion.div> 
+        : 
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
+          <TopNavSm />
+        </motion.div>
+      )}
+      <section id="landing">
+        <motion.div initial={{ opacity: 0 }} animate={{ opacity: showLandingPage ? 1 : 0 }} transition={{ duration: 1 }}>
+          <LandingPage />
+        </motion.div>
       </section>
       <section id="about">
-        <About />
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+          <About />
+        </motion.div>
       </section>
       <section id="projects">
-        <Projects />
+        <motion.div initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1 }}>
+          <Projects />
+        </motion.div>
       </section>
       <section id="contact">
-        <Contact />
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
+          <Contact />
+        </motion.div>
       </section>
       {/* <Aichat/> */}
       <Footer />
-      < Button/>
+      <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} transition={{ duration: 0.5, delay: 2 }}>
+        <Button />
+      </motion.div>
     </div>
   );
 };
